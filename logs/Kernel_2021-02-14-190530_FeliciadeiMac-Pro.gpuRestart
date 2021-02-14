@@ -1,0 +1,337 @@
+Sun Feb 14 19:05:30 2021
+
+Event:               GPU Reset
+Date/Time:           Sun Feb 14 19:05:30 2021
+Application:         
+Path:                
+Tailspin:            /Library/Logs/DiagnosticReports/gpuRestart2021-02-14-190530.tailspin
+GPUSubmission Trace ID: 0
+OS Version:          Mac OS X Version 11.2 (Build 20D64)
+Graphics Hardware:   AMD R9 xxx
+Signature:           2
+
+Report Data:
+
+GPU Log Version: 1
+
+Restart Channel: 7 UVD
+
+---THE STATE OF THE DRIVER---
+
+AMDRadeonX4000_AMDFijiGraphicsAccelerator state: ENABLED
+ PCIe Device: [4:0:0], DID=0x7300, RID=0xc9, SSID=0xb36
+ TotalVideoRAMBytes: 0x0000000100000000 (4294967296)
+Uptime 0:04:03.574785
+
+[00] Channel: GFX, last reset at 0:00:00.000000
+  CompletedTS = 0x0000b1be, SubmittedTS = 0x0000b1be
+  PendingEvent: NO NumberOfPendingCB = 0
+
+[01] Channel: Compute0, last reset at 0:00:00.000000
+  CompletedTS = 0x00000000, SubmittedTS = 0x00000000
+  PendingEvent: NO NumberOfPendingCB = 0
+
+[02] Channel: Compute1, last reset at 0:00:00.000000
+  CompletedTS = 0x00000158, SubmittedTS = 0x00000158
+  PendingEvent: NO NumberOfPendingCB = 0
+
+[03] Channel: Compute2, last reset at 0:00:00.000000
+  CompletedTS = 0x00000001, SubmittedTS = 0x00000001
+  PendingEvent: NO NumberOfPendingCB = 0
+
+[05] Channel: sDMA0, last reset at 0:00:00.000000
+  CompletedTS = 0x00008a6c, SubmittedTS = 0x00008a6c
+  PendingEvent: NO NumberOfPendingCB = 0
+
+[06] Channel: sDMA1, last reset at 0:00:00.000000
+  CompletedTS = 0x00000ab1, SubmittedTS = 0x00000ab1
+  PendingEvent: NO NumberOfPendingCB = 0
+
+[07] Channel: UVD, last reset at 0:00:00.000000
+  CompletedTS = 0x00000000, SubmittedTS = 0x00000002
+  PendingEvent: YES NumberOfPendingCB = 2, FirstPendingTS = 0x00000001, LastPendingTS = 0x00000002
+    FirstPendingCB: ProcessID = 0, ProcessName = kernel_task, SubmitContext = Video (0xffffff938c55f000)
+
+[08] Channel: VCE, last reset at 0:00:00.000000
+  CompletedTS = 0x00000000, SubmittedTS = 0x00000000
+  PendingEvent: NO NumberOfPendingCB = 0
+
+[09] Channel: VCELLQ, last reset at 0:00:00.000000
+  CompletedTS = 0x00000000, SubmittedTS = 0x00000000
+  PendingEvent: NO NumberOfPendingCB = 0
+
+[10] Channel: SAMU RBI, last reset at 0:00:00.000000
+  CompletedTS = 0x00000000, SubmittedTS = 0x00000000
+  PendingEvent: NO NumberOfPendingCB = 0
+
+[11] Channel: SAMU GPCOM, last reset at 0:00:00.000000
+  CompletedTS = 0x00000000, SubmittedTS = 0x00000000
+  PendingEvent: NO NumberOfPendingCB = 0
+
+[18] Channel: VMPT, last reset at 0:00:00.000000
+  CompletedTS = 0x00004c28, SubmittedTS = 0x00004c28
+  PendingEvent: NO NumberOfPendingCB = 0
+
+[19] Channel: GFX_HP, last reset at 0:00:00.000000
+  CompletedTS = 0x00000000, SubmittedTS = 0x00000000
+  PendingEvent: NO NumberOfPendingCB = 0
+
+[20] Channel: SDMA0_HP, last reset at 0:00:00.000000
+  CompletedTS = 0x00000000, SubmittedTS = 0x00000000
+  PendingEvent: NO NumberOfPendingCB = 0
+
+[21] Channel: SDMA1_HP, last reset at 0:00:00.000000
+  CompletedTS = 0x00000000, SubmittedTS = 0x00000000
+  PendingEvent: NO NumberOfPendingCB = 0
+
+[22] Channel: GFX_LP, last reset at 0:00:00.000000
+  CompletedTS = 0x00000000, SubmittedTS = 0x00000000
+  PendingEvent: NO NumberOfPendingCB = 0
+
+[23] Channel: SDMA0_LP, last reset at 0:00:00.000000
+  CompletedTS = 0x00000000, SubmittedTS = 0x00000000
+  PendingEvent: NO NumberOfPendingCB = 0
+
+[24] Channel: SDMA1_LP, last reset at 0:00:00.000000
+  CompletedTS = 0x00000000, SubmittedTS = 0x00000000
+  PendingEvent: NO NumberOfPendingCB = 0
+
+Pipe 0: Active, submitted = 6132, performed = 6132
+ STAT 38 WSAA 1 PWR 2 MODE 80001032 HA 3840 VA 2160 HS 4096 VS 2304 PCLK 533250  0 V Counter diff 9e 10a07 0
+
+Pipe 1: Not active, submitted = 0, performed = 0
+ STAT 18 WSAA 1 PWR 2  0 V Counter diff 0 10007 0
+
+Pipe 2: Not active, submitted = 0, performed = 0
+ STAT 18 WSAA 1 PWR 2  0 V Counter diff 0 10007 0
+
+Pipe 3: Not active, submitted = 0, performed = 0
+ STAT 18 WSAA 1 PWR 2  0 V Counter diff 0 10007 0
+----------------------------------------
+--- DRIVER STATE TRACE---               
+DeviceID                                : [4:0:0]
+----------------------                  
+u64AllAccel                             : 0x0000000000003fff
+----------------------                  
+accelStart_entry                        : 1
+accelStarted                            : 1
+accelStart_exit                         : 1
+configureDevice_entry                   : 1
+deviceConfigured                        : 1
+configureDevice_exit                    : 1
+initLinkToPeer                          : 1
+createHWHandler                         : 1
+createHWInterface                       : 1
+accelPowerUpHW_entry                    : 1
+accelPowerUpHW                          : 1
+accelPowerUpHW_exit                     : 1
+bltMgrInitialized                       : 1
+atomicBltMgrInitialized                 : 1
+----------------------                  
+u64AllHW                                : 0x0000000000ff7fff
+----------------------                  
+hardwareInit_entry                      : 1
+hardwareInit                            : 1
+hardwareInit_exit                       : 1
+initExternalInterfaces                  : 1
+hwRegistersInitialized                  : 1
+mapDoorbellMemory                       : 1
+setupCail                               : 1
+initCail                                : 1
+setupInitHWCapabilities                 : 1
+allocateHWEngines                       : 1
+initializeHWEngines                     : 1
+powerUpHWEngines                        : 1
+startHWEngines                          : 1
+initHWInfo                              : 1
+hardwarePowerUp_entry                   : 1
+hardwarePowerUp                         : 1
+hardwarePowerUp_exit                    : 1
+initializeTtl                           : 0
+hwMemoryInitialized                     : 1
+hwGartInitialized                       : 1
+hwVmmInitialized                        : 1
+initHWDisplay                           : 1
+setVirtualSpace                         : 1
+initializeHWRegisters                   : 1
+----------------------------------------
+
+---THE STATE OF THE GPU---
+GPU is connected to PCIe bus and Register access is correct.
+ timeSinceLastPowerUp = 0:03:43.826839
+
+[00] HWChannel: GFX, last reset 0:00:00.000000
+  CompletedTS = 0x0000b1bf, SubmittedTS = 0x0000b1bf
+  Ring: ENABLED
+    GPUAddress = 0x0000000100020000, Size = 0x20000, ReadPtr = 0x0000e000, WritePtr = 0x0000e000
+
+[01] HWChannel: Compute0, last reset 0:00:00.000000
+  CompletedTS = 0x00000000, SubmittedTS = 0x00000000
+  Ring: ENABLED
+    GPUAddress = 0x00000001000a0000, Size = 0x8000, ReadPtr = 0x00000000, WritePtr = 0x00000000
+
+[02] HWChannel: Compute1, last reset 0:00:00.000000
+  CompletedTS = 0x00000158, SubmittedTS = 0x00000158
+  Ring: ENABLED
+    GPUAddress = 0x00000001000c0000, Size = 0x8000, ReadPtr = 0x00002c00, WritePtr = 0x00002c00
+
+[03] HWChannel: Compute2, last reset 0:00:00.000000
+  CompletedTS = 0x00000001, SubmittedTS = 0x00000001
+  Ring: ENABLED
+    GPUAddress = 0x00000001000e0000, Size = 0x8000, ReadPtr = 0x00000080, WritePtr = 0x00000080
+
+[04] HWChannel: KIQ, last reset 0:00:00.000000
+  CompletedTS = 0x00000004, SubmittedTS = 0x00000004
+  Ring: ENABLED
+    GPUAddress = 0x0000000100100000, Size = 0x8000, ReadPtr = 0x00000080, WritePtr = 0x00000080
+
+[05] HWChannel: sDMA0, last reset 0:00:00.000000
+  CompletedTS = 0x00008a6c, SubmittedTS = 0x00008a6c
+  Ring: ENABLED
+    GPUAddress = 0x0000000100120000, Size = 0x8000, ReadPtr = 0x00001b00, WritePtr = 0x00001b00
+    Command Ring Snapshot:
+    0x1a80 : 00000000  00000000  00000000  00000000  00000000  00000000  00000000  00000000 
+    0x1a88 : 00000000  00000000  00000000  00000000  00000000  00000000  00000000  00000000 
+    0x1a90 : 00000000  00000000  00020004  00090680  00000004  00000020  00000000  00000000 
+    0x1a98 : 00000000  00000000  00000000  00000000  00000000  00000000  00000000  00000000 
+    0x1aa0 : 00000000  00000000  00000000  00000000  00000000  00000000  00000000  00000000 
+    0x1aa8 : 00000000  00000000  00000000  00000000  00000000  00000000  00000000  00000000 
+    0x1ab0 : 00000000  00000000  00000000  00000005  00000140  00000001  00008a6b  00000006 
+    0x1ab8 : 00000000  00000000  00000000  00000000  00000000  00000000  00000000  00000000 
+    --- Frame Boundary ---
+    0x1ac0 : 00000000  00000000  00000000  00000000  00000000  00000000  00000000  00000000 
+    0x1ac8 : 00000000  00000000  00000000  00000000  00000000  00000000  00000000  00000000 
+    0x1ad0 : 00000000  00000000  00010004  004f0f80  00000004  00000008  00000000  00000000 
+    0x1ad8 : 00000000  00000000  00000000  00000000  00000000  00000000  00000000  00000000 
+    0x1ae0 : 00000000  00000000  00000000  00000000  00000000  00000000  00000000  00000000 
+    0x1ae8 : 00000000  00000000  00000000  00000000  00000000  00000000  00000000  00000000 
+    0x1af0 : 00000000  00000000  00000000  00000005  00000140  00000001  00008a6c  00000006 
+    0x1af8 : 00000000  00000000  00000000  00000000  00000000  00000000  00000000  00000000 
+    --- Frame Boundary ---
+    0x1b00 :>00000000< 00000000  00000000  00000000  00000000  00000000  00000000  00000000 
+    0x1b08 : 00000000  00000000  00000000  00000000  00000000  00000000  00000000  00000000 
+    0x1b10 : 00000000  00000000  00010004  004edb20  00000004  00000008  00000000  00000000 
+    0x1b18 : 00000000  00000000  00000000  00000000  00000000  00000000  00000000  00000000 
+    0x1b20 : 00000000  00000000  00000000  00000000  00000000  00000000  00000000  00000000 
+    0x1b28 : 00000000  00000000  00000000  00000000  00000000  00000000  00000000  00000000 
+    0x1b30 : 00000000  00000000  00000000  00000005  00000140  00000001  0000886d  00000006 
+    0x1b38 : 00000000  00000000  00000000  00000000  00000000  00000000  00000000  00000000 
+
+[06] HWChannel: sDMA1, last reset 0:00:00.000000
+  CompletedTS = 0x000056d9, SubmittedTS = 0x000056d9
+  Ring: ENABLED
+    GPUAddress = 0x0000000100140000, Size = 0x8000, ReadPtr = 0x00003640, WritePtr = 0x00003640
+    Command Ring Snapshot:
+    0x35c0 : 00000000  00000000  00000000  00000000  00000000  00000000  00000000  00000000 
+    0x35c8 : 00000000  00000000  00000000  00000000  00000000  00000000  00000000  00000000 
+    0x35d0 : 00000000  00000000  80000004  00a00ea0  00000001  0000000a  00000000  00000000 
+    0x35d8 : 00000000  00000000  00000000  00000000  00000000  00000000  00000000  00000000 
+    0x35e0 : 00000000  00000000  00000000  00000000  00000000  00000000  00000000  00000000 
+    0x35e8 : 00000000  00000000  00000000  00000000  00000000  00000000  00000000  00000000 
+    0x35f0 : 00000000  00000000  00000000  00000005  00000180  00000001  000056d8  00000006 
+    0x35f8 : 00000000  00000000  00000000  00000000  00000000  00000000  00000000  00000000 
+    --- Frame Boundary ---
+    0x3600 : 00000000  00000000  00000000  00000000  00000000  00000000  00000000  00000000 
+    0x3608 : 00000000  00000000  00000000  00000000  00000000  00000000  00000000  00000000 
+    0x3610 : 00000000  00000000  80000004  00a00f00  00000001  0000000a  00000000  00000000 
+    0x3618 : 00000000  00000000  00000000  00000000  00000000  00000000  00000000  00000000 
+    0x3620 : 00000000  00000000  00000000  00000000  00000000  00000000  00000000  00000000 
+    0x3628 : 00000000  00000000  00000000  00000000  00000000  00000000  00000000  00000000 
+    0x3630 : 00000000  00000000  00000000  00000005  00000180  00000001  000056d9  00000006 
+    0x3638 : 00000000  00000000  00000000  00000000  00000000  00000000  00000000  00000000 
+    --- Frame Boundary ---
+    0x3640 :>00000000< 00000000  00000000  00000000  00000000  00000000  00000000  00000000 
+    0x3648 : 00000000  00000000  00000000  00000000  00000000  00000000  00000000  00000000 
+    0x3650 : 00000000  00000000  80000004  008a3660  00000001  00000009  00000000  00000000 
+    0x3658 : 00000000  00000000  00000000  00000000  00000000  00000000  00000000  00000000 
+    0x3660 : 00000000  00000000  00000000  00000000  00000000  00000000  00000000  00000000 
+    0x3668 : 00000000  00000000  00000000  00000000  00000000  00000000  00000000  00000000 
+    0x3670 : 00000000  00000000  00000000  00000005  00000180  00000001  000054da  00000006 
+    0x3678 : 00000000  00000000  00000000  00000000  00000000  00000000  00000000  00000000 
+
+[07] HWChannel: UVD, last reset 0:00:00.000000
+  CompletedTS = 0x00000000, SubmittedTS = 0x00000002
+  PendingTS = 0x1, sent at 0:03:57.478535, AccelChannel: 7, TS = 0x1
+  Ring: ENABLED
+    GPUAddress = 0x0000000100160000, Size = 0x8000, ReadPtr = 0x00000000, WritePtr = 0x00000080
+
+[08] HWChannel: VCE, last reset 0:00:00.000000
+  CompletedTS = 0x00000000, SubmittedTS = 0x00000000
+  Ring: DISABLED
+    GPUAddress = 0x0000000100180000, Size = 0x8000, ReadPtr = 0x00000000, WritePtr = 0x00000000
+
+[09] HWChannel: VCELLQ, last reset 0:00:00.000000
+  CompletedTS = 0x00000000, SubmittedTS = 0x00000000
+  Ring: DISABLED
+    GPUAddress = 0x00000001001a0000, Size = 0x8000, ReadPtr = 0x00000000, WritePtr = 0x00000000
+
+[10] HWChannel: SAMU RBI, last reset 0:00:00.000000
+  CompletedTS = 0x00000000, SubmittedTS = 0x00000000
+  Ring: DISABLED
+    GPUAddress = 0x00000001001c0000, Size = 0x07f8, ReadPtr = 0x00000000, WritePtr = 0x00000000
+
+[11] HWChannel: SAMU GPCOM, last reset 0:00:00.000000
+  CompletedTS = 0x00000000, SubmittedTS = 0x00000000
+  Ring: DISABLED
+    GPUAddress = 0x00000001001e0000, Size = 0x0800, ReadPtr = 0x00000000, WritePtr = 0x00000000
+
+Graphic and Compute(GC):
+  Graphic Ring: GPUAddress = 0x0000000100020000, Size = 0x00020000, ReadPtr = 0x0000e000, WritePtr = 0x0000e000
+  Compute(1,0,0) Queue: GPUAddress = 0x00000001000a0000, Size = 0x00008000, ReadPtr = 0x00000000, WritePtr = 0x00000000
+    IB: GPUAddress = 0x0000000000000000, ConsumedSize = 0x00000000, RemainSize=0x00000000 [COMPLETED]
+  Compute(1,1,0) Queue: GPUAddress = 0x00000001000c0000, Size = 0x00008000, ReadPtr = 0x00002c00, WritePtr = 0x00002c00
+    IB: GPUAddress = 0x0000000400070000, ConsumedSize = 0x00000050, RemainSize=0x00000000 [COMPLETED]
+  Compute(1,2,0) Queue: GPUAddress = 0x00000001000e0000, Size = 0x00008000, ReadPtr = 0x00000080, WritePtr = 0x00000080
+    IB: GPUAddress = 0x0000000400570000, ConsumedSize = 0x00000090, RemainSize=0x00000000 [COMPLETED]
+  Compute(1,3,0) Kiq: GPUAddress = 0x0000000100100000, Size = 0x00008000, ReadPtr = 0x00000080, WritePtr = 0x00000080
+    IB: GPUAddress = 0x0000000000000000, ConsumedSize = 0x00000000, RemainSize=0x00000000 [COMPLETED]
+  GC Pipeline Status:
+    Command Processor(CP): CPFetchers= IDLE CPGraphics= IDLE CPCompute= IDLE
+      PreFetchParser(PFP): ACTIVE
+        PFP Last Processed Commands: 
+          0xffff1000
+          0xffff1000
+          0xffff1000
+          0xffff1000
+          0xffff1000
+      MicroEngineGraphic(ME): ACTIVE
+        ME Last Processed Commands: 
+          0xc0044700
+          0xc0044700
+          0xc0001700
+          0xc0034300
+          0xc0005200
+      MicroEngineCompute0(MEC0): ACTIVE
+      MicroEngineCompute1(MEC1): HALT
+    Graphic Engine Setup: IDLE
+    Unified Shader Processor and Input: IDLE
+    Texture Pipe: IDLE
+    Render Backend: IDLE
+
+SDMA0: ACTIVE and IDLE
+  MicroEngine: ACTIVE
+  Ring: GPUAddress = 0x0000000001001200, Size = 0x00008000, ReadPtr = 0x00001b00, WritePtr = 0x00001b00
+    IB: [ENABLE] GPUAddress = 0x00000004004f0f80, ConsumedSize = 0x00000020, RemainSize=0x00000000
+
+SDMA1: ACTIVE and IDLE
+  MicroEngine: ACTIVE
+  Ring: GPUAddress = 0x0000000001001400, Size = 0x00008000, ReadPtr = 0x00003640 WritePtr = 0x00003640
+    IB: [ENABLE] GPUAddress = 0x0000000100a00f00, ConsumedSize = 0x00000028, RemainSize=0x00000000
+
+UVD0: Enabled
+
+VCE: Disabled
+
+SAMU: Disabled
+
+VM Protection Fault:
+  System Domain: NO
+    GPUAddress = 0x0000000000000000, VMID = 0
+    Failing Protection = 
+    MC Client: 
+  Virtual Domain: NO
+    GPUAddress = 0x0000000000000000, VMID = 0
+    Failing Protection = 
+    MC Client: 
+
+
