@@ -1,6 +1,5 @@
-# X10DAi hackintosh
 ## Supermicro X10DAi running macOS
-|current version|11.2|
+|support macOS ver.|11.2|
 |:-|-|
 |bootloader|OpenCore 0.66 DBG|
 
