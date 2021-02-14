@@ -7,7 +7,7 @@
 |system-configs||notes|
 |:-|:-:|:-:|
 |CPU|Xeon E5 2695v3 ES x2|XCPM work,but not sure if cpu Scheduling correct|
-|Graphics|Radeon Pro Duo Fiji |Mod to add GoP support,switch legacy to EFI corresponding to PCIE slot in bios PCIE configuration| 
+|Graphics|Radeon Pro Duo Fiji |Mod to add GoP support| 
 |BIOS|X10DAi9.C16|Mod to unblock cfg lock and add nvme support|
 |Sounds|Creative usb external card|Use soundsource to adjust volume|
 |Keyboard|ikbc F87|Update [firmware]（https://share.weiyun.com/riG5w1hT) to solve typing problem|
