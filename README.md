@@ -3,8 +3,8 @@
 |ver|11.2|
 |:-|-|
 
-|system-configs|
-|:-|-|
+|system-configs||
+|:-|:-:|
 |CPU.|Xeon E5 2695v3 ES x2|
 |Graphics|Radeon Pro Duo Fiji |
 |Disk|WD sn720 x4 via PCIE|
