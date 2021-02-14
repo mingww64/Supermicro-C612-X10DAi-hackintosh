@@ -6,10 +6,13 @@
 
 |system-configs||notes|
 |:-|:-:|:-:|
-|CPU|Xeon E5 2695v3 ES x2|xcpm work,but not sure if cpu Scheduling correct|
-|Graphics|Radeon Pro Duo Fiji |modding vbios to add GoP support,switch legacy to EFI corresponding to PCIE slot in bios PCIE configuration| 
-|Disk|WD sn720 x4 |via PCIE|not sure if nvmefix is a must|
-|Monitor|3840x2160 27' |connect via DP|
+|CPU|Xeon E5 2695v3 ES x2|XCPM work,but not sure if cpu Scheduling correct|
+|Graphics|Radeon Pro Duo Fiji |Mod to add GoP support,switch legacy to EFI corresponding to PCIE slot in bios PCIE configuration| 
+|BIOS|X10DAi9.C16|Mod to unblock cfg lock and add nvme support|
+|Sounds|Creative usb external card|Use soundsource to adjust volume|
+|Keyboard|ikbc F87|Update [firmware]（https://share.weiyun.com/riG5w1hT) to solve typing problem|
+|Disk|WD sn720 x4 |via PCIE|Not sure if nvmefix.kext is a must|
+|Monitor|3840x2160 27' |Connect via DP|
 * __issues__ 
   * __Sleep__
   * __Unpredictable window frezze,force reboot needs__
