@@ -14,6 +14,6 @@
   * __Sleep__
   * __Unpredictable window frezze,force reboot needs__
   * __Onboard-audio not test but should work__ *//my alc888 is broken*
-  * _Some logs uploaded,if you need more detail feel free to contact me._  
+  * _Some logs uploaded,feel free to contact me._  
 *** 
 __For v4 cpu user,needs to change some stuffs like fake cpu id,more info: [dortania guide](https://dortania.github.io/OpenCore-Install-Guide/config-HEDT/broadwell-e.html#acpi/)__
