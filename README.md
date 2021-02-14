@@ -5,8 +5,8 @@
 |bootloader|OpenCore 0.66 DBG|
 
 |system-configs||notes|
-|:-|:-:|-|
-|CPU|Xeon E5 2695v3 ES x2|xcpm work,not sure if cpu Scheduling correct|
+|:-|:-:|:-:|
+|CPU|Xeon E5 2695v3 ES x2|xcpm work,but not sure if cpu Scheduling correct|
 |Graphics|Radeon Pro Duo Fiji |modding vbios to add GoP support,switch legacy to EFI corresponding to PCIE slot in bios PCIE configuration| 
 |Disk|WD sn720 x4 |via PCIE|not sure if nvmefix is a must|
 |Monitor|3840x2160 27' |connect via DP|
