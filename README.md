@@ -1,7 +1,8 @@
 #X10DAi hackintosh
 ##Supermicro X10DAi running macOS
-|ver|11.2|
+|current version|11.2|
 |:-|-|
+|bootloader|OpenCore 0.66 DBG|
 
 |system-configs||
 |:-|:-:|
@@ -9,9 +10,9 @@
 |Graphics|Radeon Pro Duo Fiji |
 |Disk|WD sn720 x4 via PCIE|
 |Monitor|3840x2160 27' connect via DP|
-* __issues
-  * __sleep
-  * __window frezze,force reboot needs
+* __issues__ _some logs uploaded,waiting for help,if you need more detail please contact me at any time!_
+  * __sleep__
+  * __window frezze,force reboot needs__
   * __onboard-audio not test but should work__ *my hardware is broken*
 
 
