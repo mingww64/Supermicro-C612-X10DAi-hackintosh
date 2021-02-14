@@ -2,6 +2,7 @@
 |support macOS ver.|11.2|
 |:-|-|
 |bootloader|OpenCore 0.66 DBG|
+|CPU Platform|Haswell-EP(E5v3)
 
 |system-configs||notes|
 |:-|:-:|:-:|
