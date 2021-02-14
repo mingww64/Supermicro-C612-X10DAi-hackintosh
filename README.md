@@ -13,5 +13,5 @@
 * __issues__ 
   * __sleep__
   * __window frezze,force reboot needs__
-  * __onboard-audio not test but should work__ *my hardware is broken*
+  * __onboard-audio not test but should work__ *//my alc888 is broken*
   * _some logs uploaded,if you need more detail feel free to contact me._
