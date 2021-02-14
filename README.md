@@ -16,4 +16,7 @@
   * __Onboard-audio not test but should work__ *//my alc888 is broken*
   * _Some logs uploaded,feel free to contact me._  
 *** 
-__For v4 cpu user,needs to change some stuffs like fake cpu id,more info: [dortania guide](https://dortania.github.io/OpenCore-Install-Guide/config-HEDT/broadwell-e.html#acpi/)__
+__For v4 cpu user,needs to change some stuffs like fake cpu id,more info: [dortania guide](https://dortania.github.io/OpenCore-Install-Guide/config-HEDT/broadwell-e.html#acpi/)__  
+
+# Hack for belief
+![interview](https://github.com/wmyfelix/X10DAi-hackintosh/blob/main/interview.png?raw=true)
