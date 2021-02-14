@@ -9,10 +9,10 @@
 |Graphics|Radeon Pro Duo Fiji |
 |Disk|WD sn720 x4 via PCIE|
 |Monitor|3840x2160 27' connect via DP|
-* issues
-  * sleep
-  * window frezze,force reboot needs
-  * onboard-audio not test but should work *my hardware is broken*
+* __issues
+  * __sleep
+  * __window frezze,force reboot needs
+  * __onboard-audio not test but should work__ *my hardware is broken*
 
 
 
