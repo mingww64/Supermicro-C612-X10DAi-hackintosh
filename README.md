@@ -4,7 +4,7 @@
 |:-|-|
 |bootloader|OpenCore 0.66 DBG|
 
-|system-configs|
+|system-configs||
 |:-|:-:|
 |CPU.|Xeon E5 2695v3 ES x2|
 |Graphics|Radeon Pro Duo Fiji |
