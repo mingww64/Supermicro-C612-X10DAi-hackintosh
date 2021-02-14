@@ -1,0 +1,443 @@
+Date/Time:        2021-02-12 21:41:51.793 +0800
+End time:         2021-02-12 21:43:25.994 +0800
+OS Version:       macOS 11.2 (Build 20D64)
+Architecture:     x86_64h
+Report Version:   32
+Incident Identifier: 73BDE8F7-5585-4A37-8F84-827FC3E859BE
+
+Data Source:      Microstackshots
+Shared Cache:     A33707D1-FC47-30FB-A239-A6AFA68DA7C0 slid base address 0x7fff20339000, slide 0x339000
+
+Command:          TextEdit
+Path:             /System/Applications/TextEdit.app/Contents/MacOS/TextEdit
+Identifier:       com.apple.TextEdit
+Version:          1.16 (365.2)
+Build Version:    20
+Project Name:     TextEdit
+Source Version:   365002000000000
+Parent:           UNKNOWN [1]
+PID:              379
+
+Event:            cpu usage
+Action taken:     none
+CPU:              90 seconds cpu time over 94 seconds (96% cpu average), exceeding limit of 50% cpu over 180 seconds
+CPU limit:        90s
+Limit duration:   180s
+CPU used:         90s
+CPU duration:     94s
+Duration:         94.20s
+Duration Sampled: 88.22s (process was unresponsive for 1 seconds before sampling)
+Steps:            44
+
+Hardware model:   iMacPro1,1
+Active cpus:      56
+Boot args:        -v swd_panic=1 keepsyms=1 debug=0x100 npci=0x2000 alcid=1 chunklist-security-epoch=0 -chunklist-no-rev2-dev chunklist-security-epoch=0 -chunklist-no-rev2-dev
+
+
+Heaviest stack for the target process:
+  28  start + 1 (libdyld.dylib + 87585) [0x7fff20665621]
+  28  NSApplicationMain + 816 (AppKit + 14703) [0x7fff22f2596f]
+  28  -[NSApplication run] + 586 (AppKit + 194186) [0x7fff22f5168a]
+  28  -[NSApplication(NSEvent) _nextEventMatchingEventMask:untilDate:inMode:dequeue:] + 1366 (AppKit + 250231) [0x7fff22f5f177]
+  28  _DPSNextEvent + 883 (AppKit + 256433) [0x7fff22f609b1]
+  28  _BlockUntilNextEventMatchingListInModeWithFilter + 64 (HIToolbox + 201039) [0x7fff289c814f]
+  28  ReceiveNextEventCommon + 709 (HIToolbox + 201772) [0x7fff289c842c]
+  28  RunCurrentEventLoopInMode + 292 (HIToolbox + 202288) [0x7fff289c8630]
+  28  CFRunLoopRunSpecific + 563 (CoreFoundation + 521934) [0x7fff207406ce]
+  28  __CFRunLoopRun + 2402 (CoreFoundation + 526089) [0x7fff20741709]
+  28  __CFRunLoopDoSource1 + 595 (CoreFoundation + 532581) [0x7fff20743065]
+  28  __CFRUNLOOP_IS_CALLING_OUT_TO_A_SOURCE1_PERFORM_FUNCTION__ + 41 (CoreFoundation + 532872) [0x7fff20743188]
+  28  mshMIGPerform + 174 (HIServices + 38484) [0x7fff259bc654]
+  28  _XCopyParameterizedAttributeValue + 608 (HIServices + 312303) [0x7fff259ff3ef]
+  28  _AXXMIGCopyParameterizedAttributeValue + 437 (HIServices + 169296) [0x7fff259dc550]
+  28  CopyParameterizedAttributeValue + 460 (AppKit + 4690513) [0x7fff2339b251]
+  28  NSAccessibilityEntryPointValueForAttributeWithParameter + 172 (AppKit + 6812181) [0x7fff235a1215]
+  28  NSAccessibilityPerformEntryPointObject + 16 (AppKit + 6805971) [0x7fff2359f9d3]
+  28  ___NSAccessibilityEntryPointValueForAttributeWithParameter_block_invoke.840 + 447 (AppKit + 6825725) [0x7fff235a46fd]
+  28  -[NSAccessibilityAttributeAccessorInfo getParameterizedAttributeValue:forObject:withParameter:] + 65 (AppKit + 6818709) [0x7fff235a2b95]
+  28  -[NSAccessibilityAttributeAccessorInfo _getParameterizedAttributeForObject:withParameter:] + 909 (AppKit + 6818011) [0x7fff235a28db]
+  28  -[NSTextView accessibilityFrameForRange:] + 45 (AppKit + 8630205) [0x7fff2375cfbd]
+  28  -[NSResponder accessibilityFrameForRange:] + 69 (AppKit + 7494154) [0x7fff23647a0a]
+  28  NSAccessibilityGetRectValueForAttributeAndParameter + 66 (AppKit + 6815629) [0x7fff235a1f8d]
+  28  -[NSTextView(NSTextViewAccessibility) accessibilityBoundsForRangeAttributeForParameter:] + 210 (AppKit + 8637607) [0x7fff2375eca7]
+  28  -[NSText(NSTextAccessibilityPrivate) accessibilityBoundsForCharacterRange:] + 524 (AppKit + 8424728) [0x7fff2372ad18]
+  28  -[NSTextLayoutManager ensureLayoutForRange:] + 226 (UIFoundation + 842093) [0x7fff23d5296d]
+  28  -[NSTextLayoutManager enumerateTextLayoutFragmentsFromLocation:options:usingBlock:] + 342 (UIFoundation + 847144) [0x7fff23d53d28]
+  28  -[NSTextContentStorage enumerateTextElementsFromLocation:options:usingBlock:] + 2074 (UIFoundation + 883526) [0x7fff23d5cb46]
+  28  __83-[NSTextLayoutManager enumerateTextLayoutFragmentsFromLocation:options:usingBlock:]_block_invoke + 1098 (UIFoundation + 848463) [0x7fff23d5424f]
+  28  -[__NSSingleObjectArrayI enumerateObjectsWithOptions:usingBlock:] + 80 (CoreFoundation + 565151) [0x7fff2074af9f]
+  28  __NSARRAY_IS_CALLING_OUT_TO_A_BLOCK__ + 7 (CoreFoundation + 482183) [0x7fff20736b87]
+  28  __83-[NSTextLayoutManager enumerateTextLayoutFragmentsFromLocation:options:usingBlock:]_block_invoke_2 + 223 (UIFoundation + 848882) [0x7fff23d543f2]
+  28  -[NSTextLayoutFragment _layout] + 1538 (UIFoundation + 1313177) [0x7fff23dc5999]
+  22  -[NSTextLayoutManager updateLayoutWithTextLayoutFragment:addition:] + 1282 (UIFoundation + 838320) [0x7fff23d51ab0]
+  22  __NSTextLayoutManagerFillSoftInvalidationToLocation + 120 (UIFoundation + 840129) [0x7fff23d521c1]
+  22  __NSTextLayoutManagerGetTextLayoutFragmentPointerAtLocation + 71 (UIFoundation + 829233) [0x7fff23d4f731]
+  22  __NSTextLayoutManagerPrepareLinearLayoutFragments + 267 (UIFoundation + 839989) [0x7fff23d52135]
+  12  _qsort + 1973 (libsystem_c.dylib + 385081) [0x7fff2057b039]
+  5   _qsort + 1973 (libsystem_c.dylib + 385081) [0x7fff2057b039]
+  3   _qsort + 2098 (libsystem_c.dylib + 385206) [0x7fff2057b0b6]
+  1   _qsort + 2098 (libsystem_c.dylib + 385206) [0x7fff2057b0b6]
+  1   _qsort + 1127 (libsystem_c.dylib + 384235) [0x7fff2057aceb]
+  1   ____NSTextLayoutManagerPrepareLinearLayoutFragments_block_invoke + 146 (UIFoundation + 872732) [0x7fff23d5a11c]
+  1   objc_object::rootAutorelease2() + 66 (libobjc.A.dylib + 39690) [0x7fff204eab0a]
+  1   AutoreleasePoolPage::add(objc_object*) + 6 (libobjc.A.dylib + 148456) [0x7fff205053e8]
+
+
+Powerstats for:   TextEdit [379]
+UUID:             33DDADC1-1E81-3FD0-BD0C-35539C39E477
+App Version:      1.16
+Build Version:    365.2
+Path:             /System/Applications/TextEdit.app/Contents/MacOS/TextEdit
+Architecture:     x86_64
+Parent:           UNKNOWN [1]
+UID:              501
+Sudden Term:      Tracked
+Footprint:        50.36 MB -> 123.42 MB (+73.05 MB)
+Start time:       2021-02-12 21:41:56.934 +0800
+End time:         2021-02-12 21:43:25.153 +0800
+Num samples:      28 (64%)
+Note:             Unresponsive
+Primary state:    20 samples Non-Frontmost App, Non-Suppressed, User mode, Effective Thread QoS User Interactive, Requested Thread QoS User Interactive, Override Thread QoS Unspecified
+User Activity:    0 samples Idle, 28 samples Active
+Power Source:     0 samples on Battery, 28 samples on AC
+  28  start + 1 (libdyld.dylib + 87585) [0x7fff20665621]
+    28  NSApplicationMain + 816 (AppKit + 14703) [0x7fff22f2596f]
+      28  -[NSApplication run] + 586 (AppKit + 194186) [0x7fff22f5168a]
+        28  -[NSApplication(NSEvent) _nextEventMatchingEventMask:untilDate:inMode:dequeue:] + 1366 (AppKit + 250231) [0x7fff22f5f177]
+          28  _DPSNextEvent + 883 (AppKit + 256433) [0x7fff22f609b1]
+            28  _BlockUntilNextEventMatchingListInModeWithFilter + 64 (HIToolbox + 201039) [0x7fff289c814f]
+              28  ReceiveNextEventCommon + 709 (HIToolbox + 201772) [0x7fff289c842c]
+                28  RunCurrentEventLoopInMode + 292 (HIToolbox + 202288) [0x7fff289c8630]
+                  28  CFRunLoopRunSpecific + 563 (CoreFoundation + 521934) [0x7fff207406ce]
+                    28  __CFRunLoopRun + 2402 (CoreFoundation + 526089) [0x7fff20741709]
+                      28  __CFRunLoopDoSource1 + 595 (CoreFoundation + 532581) [0x7fff20743065]
+                        28  __CFRUNLOOP_IS_CALLING_OUT_TO_A_SOURCE1_PERFORM_FUNCTION__ + 41 (CoreFoundation + 532872) [0x7fff20743188]
+                          28  mshMIGPerform + 174 (HIServices + 38484) [0x7fff259bc654]
+                            28  _XCopyParameterizedAttributeValue + 608 (HIServices + 312303) [0x7fff259ff3ef]
+                              28  _AXXMIGCopyParameterizedAttributeValue + 437 (HIServices + 169296) [0x7fff259dc550]
+                                28  CopyParameterizedAttributeValue + 460 (AppKit + 4690513) [0x7fff2339b251]
+                                  28  NSAccessibilityEntryPointValueForAttributeWithParameter + 172 (AppKit + 6812181) [0x7fff235a1215]
+                                    28  NSAccessibilityPerformEntryPointObject + 16 (AppKit + 6805971) [0x7fff2359f9d3]
+                                      28  ___NSAccessibilityEntryPointValueForAttributeWithParameter_block_invoke.840 + 447 (AppKit + 6825725) [0x7fff235a46fd]
+                                        28  -[NSAccessibilityAttributeAccessorInfo getParameterizedAttributeValue:forObject:withParameter:] + 65 (AppKit + 6818709) [0x7fff235a2b95]
+                                          28  -[NSAccessibilityAttributeAccessorInfo _getParameterizedAttributeForObject:withParameter:] + 909 (AppKit + 6818011) [0x7fff235a28db]
+                                            28  -[NSTextView accessibilityFrameForRange:] + 45 (AppKit + 8630205) [0x7fff2375cfbd]
+                                              28  -[NSResponder accessibilityFrameForRange:] + 69 (AppKit + 7494154) [0x7fff23647a0a]
+                                                28  NSAccessibilityGetRectValueForAttributeAndParameter + 66 (AppKit + 6815629) [0x7fff235a1f8d]
+                                                  28  -[NSTextView(NSTextViewAccessibility) accessibilityBoundsForRangeAttributeForParameter:] + 210 (AppKit + 8637607) [0x7fff2375eca7]
+                                                    28  -[NSText(NSTextAccessibilityPrivate) accessibilityBoundsForCharacterRange:] + 524 (AppKit + 8424728) [0x7fff2372ad18]
+                                                      28  -[NSTextLayoutManager ensureLayoutForRange:] + 226 (UIFoundation + 842093) [0x7fff23d5296d]
+                                                        28  -[NSTextLayoutManager enumerateTextLayoutFragmentsFromLocation:options:usingBlock:] + 342 (UIFoundation + 847144) [0x7fff23d53d28]
+                                                          28  -[NSTextContentStorage enumerateTextElementsFromLocation:options:usingBlock:] + 2074 (UIFoundation + 883526) [0x7fff23d5cb46]
+                                                            28  __83-[NSTextLayoutManager enumerateTextLayoutFragmentsFromLocation:options:usingBlock:]_block_invoke + 1098 (UIFoundation + 848463) [0x7fff23d5424f]
+                                                              28  -[__NSSingleObjectArrayI enumerateObjectsWithOptions:usingBlock:] + 80 (CoreFoundation + 565151) [0x7fff2074af9f]
+                                                                28  __NSARRAY_IS_CALLING_OUT_TO_A_BLOCK__ + 7 (CoreFoundation + 482183) [0x7fff20736b87]
+                                                                  28  __83-[NSTextLayoutManager enumerateTextLayoutFragmentsFromLocation:options:usingBlock:]_block_invoke_2 + 223 (UIFoundation + 848882) [0x7fff23d543f2]
+                                                                    28  -[NSTextLayoutFragment _layout] + 1538 (UIFoundation + 1313177) [0x7fff23dc5999]
+                                                                      22  -[NSTextLayoutManager updateLayoutWithTextLayoutFragment:addition:] + 1282 (UIFoundation + 838320) [0x7fff23d51ab0]
+                                                                        22  __NSTextLayoutManagerFillSoftInvalidationToLocation + 120 (UIFoundation + 840129) [0x7fff23d521c1]
+                                                                          22  __NSTextLayoutManagerGetTextLayoutFragmentPointerAtLocation + 71 (UIFoundation + 829233) [0x7fff23d4f731]
+                                                                            22  __NSTextLayoutManagerPrepareLinearLayoutFragments + 267 (UIFoundation + 839989) [0x7fff23d52135]
+                                                                              12  _qsort + 1973 (libsystem_c.dylib + 385081) [0x7fff2057b039]
+                                                                                5   _qsort + 1973 (libsystem_c.dylib + 385081) [0x7fff2057b039]
+                                                                                  3   _qsort + 2098 (libsystem_c.dylib + 385206) [0x7fff2057b0b6]
+                                                                                    1   _qsort + 2098 (libsystem_c.dylib + 385206) [0x7fff2057b0b6]
+                                                                                      1   _qsort + 1127 (libsystem_c.dylib + 384235) [0x7fff2057aceb]
+                                                                                        1   ____NSTextLayoutManagerPrepareLinearLayoutFragments_block_invoke + 146 (UIFoundation + 872732) [0x7fff23d5a11c]
+                                                                                          1   objc_object::rootAutorelease2() + 66 (libobjc.A.dylib + 39690) [0x7fff204eab0a]
+                                                                                            1   AutoreleasePoolPage::add(objc_object*) + 6 (libobjc.A.dylib + 148456) [0x7fff205053e8]
+                                                                                              1   <Frontmost App>
+                                                                                    1   _qsort + 732 (libsystem_c.dylib + 383840) [0x7fff2057ab60]
+                                                                                      1   ____NSTextLayoutManagerPrepareLinearLayoutFragments_block_invoke + 126 (UIFoundation + 872712) [0x7fff23d5a108]
+                                                                                        1   objc_getProperty + 116 (libobjc.A.dylib + 46521) [0x7fff204ec5b9]
+                                                                                    1   _qsort + 705 (libsystem_c.dylib + 383813) [0x7fff2057ab45]
+                                                                                      1   ____NSTextLayoutManagerPrepareLinearLayoutFragments_block_invoke + 54 (UIFoundation + 872640) [0x7fff23d5a0c0]
+                                                                                        1   objc_object::rootAutorelease2() + 66 (libobjc.A.dylib + 39690) [0x7fff204eab0a]
+                                                                                          1   AutoreleasePoolPage::add(objc_object*) + 128 (libobjc.A.dylib + 148578) [0x7fff20505462]
+                                                                                  1   _qsort + 1127 (libsystem_c.dylib + 384235) [0x7fff2057aceb]
+                                                                                    1   ____NSTextLayoutManagerPrepareLinearLayoutFragments_block_invoke + 138 (UIFoundation + 872724) [0x7fff23d5a114]
+                                                                                      1   -[NSTextLayoutFragment rangeInElement] + 30 (UIFoundation + 1308896) [0x7fff23dc48e0]
+                                                                                        1   objc_retain + 80 (libobjc.A.dylib + 23536) [0x7fff204e6bf0]
+                                                                                  1   _qsort + 917 (libsystem_c.dylib + 384025) [0x7fff2057ac19]
+                                                                                    1   objc_msgSend + 6 (libobjc.A.dylib + 23814) [0x7fff204e6d06]
+                                                                                      1   <Frontmost App>
+                                                                                4   _qsort + 2098 (libsystem_c.dylib + 385206) [0x7fff2057b0b6]
+                                                                                  3   _qsort + 917 (libsystem_c.dylib + 384025) [0x7fff2057ac19]
+                                                                                    1   ____NSTextLayoutManagerPrepareLinearLayoutFragments_block_invoke + 126 (UIFoundation + 872712) [0x7fff23d5a108]
+                                                                                      1   objc_object::rootAutorelease2() + 66 (libobjc.A.dylib + 39690) [0x7fff204eab0a]
+                                                                                        1   AutoreleasePoolPage::add(objc_object*) + 128 (libobjc.A.dylib + 148578) [0x7fff20505462]
+                                                                                    1   ____NSTextLayoutManagerPrepareLinearLayoutFragments_block_invoke + 85 (UIFoundation + 872671) [0x7fff23d5a0df]
+                                                                                      1   objc_loadWeak + 15 (libobjc.A.dylib + 61960) [0x7fff204f0208]
+                                                                                        1   objc_loadWeakRetained + 365 (libobjc.A.dylib + 53305) [0x7fff204ee039]
+                                                                                    1   objc_msgSend + 56 (libobjc.A.dylib + 23864) [0x7fff204e6d38]
+                                                                                      1   <Frontmost App>
+                                                                                  1   _qsort + 1973 (libsystem_c.dylib + 385081) [0x7fff2057b039]
+                                                                                    1   _qsort + 917 (libsystem_c.dylib + 384025) [0x7fff2057ac19]
+                                                                                      1   ____NSTextLayoutManagerPrepareLinearLayoutFragments_block_invoke + 54 (UIFoundation + 872640) [0x7fff23d5a0c0]
+                                                                                        1   objc_loadWeak + 15 (libobjc.A.dylib + 61960) [0x7fff204f0208]
+                                                                                          1   objc_loadWeakRetained + 481 (libobjc.A.dylib + 53421) [0x7fff204ee0ad]
+                                                                                2   _qsort + 1127 (libsystem_c.dylib + 384235) [0x7fff2057aceb]
+                                                                                  1   ____NSTextLayoutManagerPrepareLinearLayoutFragments_block_invoke + 138 (UIFoundation + 872724) [0x7fff23d5a114]
+                                                                                    1   -[NSTextLayoutFragment rangeInElement] + 30 (UIFoundation + 1308896) [0x7fff23dc48e0]
+                                                                                      1   objc_getProperty + 77 (libobjc.A.dylib + 46482) [0x7fff204ec592]
+                                                                                  1   ____NSTextLayoutManagerPrepareLinearLayoutFragments_block_invoke + 85 (UIFoundation + 872671) [0x7fff23d5a0df]
+                                                                                    1   objc_loadWeak + 15 (libobjc.A.dylib + 61960) [0x7fff204f0208]
+                                                                                      1   objc_loadWeakRetained + 404 (libobjc.A.dylib + 53344) [0x7fff204ee060]
+                                                                                1   _qsort + 917 (libsystem_c.dylib + 384025) [0x7fff2057ac19]
+                                                                                  1   ____NSTextLayoutManagerPrepareLinearLayoutFragments_block_invoke + 146 (UIFoundation + 872732) [0x7fff23d5a11c]
+                                                                                    1   objc_getProperty + 129 (libobjc.A.dylib + 46534) [0x7fff204ec5c6]
+                                                                              5   _qsort + 917 (libsystem_c.dylib + 384025) [0x7fff2057ac19]
+                                                                                2   objc_msgSend + 26 (libobjc.A.dylib + 23834) [0x7fff204e6d1a]
+                                                                                  1   <Frontmost App>
+                                                                                1   ____NSTextLayoutManagerPrepareLinearLayoutFragments_block_invoke + 138 (UIFoundation + 872724) [0x7fff23d5a114]
+                                                                                  1   -[NSTextLayoutFragment rangeInElement] + 30 (UIFoundation + 1308896) [0x7fff23dc48e0]
+                                                                                    1   objc_retain + 80 (libobjc.A.dylib + 23536) [0x7fff204e6bf0]
+                                                                                      1   <Frontmost App>
+                                                                                1   ____NSTextLayoutManagerPrepareLinearLayoutFragments_block_invoke + 126 (UIFoundation + 872712) [0x7fff23d5a108]
+                                                                                  1   objc_getProperty + 6 (libobjc.A.dylib + 46411) [0x7fff204ec54b]
+                                                                                1   ____NSTextLayoutManagerPrepareLinearLayoutFragments_block_invoke + 54 (UIFoundation + 872640) [0x7fff23d5a0c0]
+                                                                                  1   objc_loadWeak + 15 (libobjc.A.dylib + 61960) [0x7fff204f0208]
+                                                                                    1   objc_loadWeakRetained + 461 (libobjc.A.dylib + 53401) [0x7fff204ee099]
+                                                                                      1   <Frontmost App>
+                                                                              4   _qsort + 2098 (libsystem_c.dylib + 385206) [0x7fff2057b0b6]
+                                                                                2   _qsort + 2098 (libsystem_c.dylib + 385206) [0x7fff2057b0b6]
+                                                                                  2   _qsort + 1127 (libsystem_c.dylib + 384235) [0x7fff2057aceb]
+                                                                                    1   ____NSTextLayoutManagerPrepareLinearLayoutFragments_block_invoke + 54 (UIFoundation + 872640) [0x7fff23d5a0c0]
+                                                                                      1   objc_object::rootAutorelease2() + 84 (libobjc.A.dylib + 39708) [0x7fff204eab1c]
+                                                                                    1   objc_msgSend + 26 (libobjc.A.dylib + 23834) [0x7fff204e6d1a]
+                                                                                1   _qsort + 1973 (libsystem_c.dylib + 385081) [0x7fff2057b039]
+                                                                                  1   _qsort + 486 (libsystem_c.dylib + 383594) [0x7fff2057aa6a]
+                                                                                    1   ____NSTextLayoutManagerPrepareLinearLayoutFragments_block_invoke + 161 (UIFoundation + 872747) [0x7fff23d5a12b]
+                                                                                      1   objc_msgSend + 37 (libobjc.A.dylib + 23845) [0x7fff204e6d25]
+                                                                                1   _qsort + 1127 (libsystem_c.dylib + 384235) [0x7fff2057aceb]
+                                                                                  1   ____NSTextLayoutManagerPrepareLinearLayoutFragments_block_invoke + 126 (UIFoundation + 872712) [0x7fff23d5a108]
+                                                                                    1   objc_object::rootAutorelease2() + 66 (libobjc.A.dylib + 39690) [0x7fff204eab0a]
+                                                                                      1   AutoreleasePoolPage::add(objc_object*) + 179 (libobjc.A.dylib + 148629) [0x7fff20505495]
+                                                                              1   _qsort + 1127 (libsystem_c.dylib + 384235) [0x7fff2057aceb]
+                                                                                1   ____NSTextLayoutManagerPrepareLinearLayoutFragments_block_invoke + 54 (UIFoundation + 872640) [0x7fff23d5a0c0]
+                                                                                  1   objc_loadWeak + 15 (libobjc.A.dylib + 61960) [0x7fff204f0208]
+                                                                                    1   objc_loadWeakRetained + 461 (libobjc.A.dylib + 53401) [0x7fff204ee099]
+                                                                                      1   <Frontmost App>
+                                                                      6   -[NSTextLayoutManager updateLayoutWithTextLayoutFragment:addition:] + 1852 (UIFoundation + 838890) [0x7fff23d51cea]
+                                                                        6   objc_autoreleasePoolPop + 161 (libobjc.A.dylib + 33598) [0x7fff204e933e]
+                                                                          3   objc_release + 82 (libobjc.A.dylib + 31218) [0x7fff204e89f2]
+                                                                          2   AutoreleasePoolPage::releaseUntil(objc_object**) + 103 (libobjc.A.dylib + 152413) [0x7fff2050635d]
+                                                                          1   AutoreleasePoolPage::releaseUntil(objc_object**) + 157 (libobjc.A.dylib + 152467) [0x7fff20506393]
+                                                                            1   <Frontmost App>
+
+  Binary Images:
+           0x107392000 -                ???  com.apple.TextEdit 1.16 (365.2)         <33DDADC1-1E81-3FD0-BD0C-35539C39E477>  /System/Applications/TextEdit.app/Contents/MacOS/TextEdit
+        0x7fff204e1000 -     0x7fff20519fff  libobjc.A.dylib (818.2)                 <EB6B543F-D42C-3FB2-A2EC-43407C5F80D3>  /usr/lib/libobjc.A.dylib
+        0x7fff2051d000 -     0x7fff205a5fff  libsystem_c.dylib (1439.40.11)          <4AF71812-4099-3E96-B271-1F259491A2B2>  /usr/lib/system/libsystem_c.dylib
+        0x7fff20650000 -     0x7fff2068afff  libdyld.dylib (832.7.3)                 <4641E48F-75B5-3CC7-8263-47BF79F15394>  /usr/lib/system/libdyld.dylib
+        0x7fff206c1000 -     0x7fff20b5cfff  com.apple.CoreFoundation 6.9 (1774.101) <2A0E160E-9EE6-3B23-8832-6979A16EC250>  /System/Library/Frameworks/CoreFoundation.framework/Versions/A/CoreFoundation
+        0x7fff22f22000 -     0x7fff23c84fff  com.apple.AppKit 6.9 (2022.30.122)      <A8124803-CB85-3F33-8674-16B2A021D71C>  /System/Library/Frameworks/AppKit.framework/Versions/C/AppKit
+        0x7fff23c85000 -     0x7fff23ed9fff  com.apple.UIFoundation 1.0 (727.3)      <5A905085-B5EB-3F71-A663-200428E7A5F4>  /System/Library/PrivateFrameworks/UIFoundation.framework/Versions/A/UIFoundation
+        0x7fff259b3000 -     0x7fff25a0efff  com.apple.HIServices 1.22 (714)         <780B2B09-80A6-32C8-B9E5-024988196E00>  /System/Library/Frameworks/ApplicationServices.framework/Versions/A/Frameworks/HIServices.framework/Versions/A/HIServices
+        0x7fff28997000 -     0x7fff28c96fff  com.apple.HIToolbox 2.1.1 (1061.2)      <82B316E1-E47F-334D-8C33-DB1B7E8A4F71>  /System/Library/Frameworks/Carbon.framework/Versions/A/Frameworks/HIToolbox.framework/Versions/A/HIToolbox
+
+
+Powerstats for:   Finder
+UUID:             645F09C0-A56B-3F9D-82CD-66CD30DA15DB
+App Version:      11.1
+Build Version:    1350.2.10
+Path:             /System/Library/CoreServices/Finder.app/Contents/MacOS/Finder
+Architecture:     x86_64
+Start time:       2021-02-12 21:43:07.776 +0800
+End time:         2021-02-12 21:43:18.570 +0800
+Num samples:      4 (9%)
+Primary state:    2 samples Frontmost App, Non-Suppressed, User mode, Effective Thread QoS User Interactive, Requested Thread QoS User Interactive, Override Thread QoS Unspecified
+User Activity:    0 samples Idle, 4 samples Active
+Power Source:     0 samples on Battery, 4 samples on AC
+  2  start + 1 (libdyld.dylib + 87585) [0x7fff20665621]
+    2  ??? (Finder + 36612) [0x10ebe3f04]
+      2  NSApplicationMain + 816 (AppKit + 14703) [0x7fff22f2596f]
+        1  -[NSApplication run] + 636 (AppKit + 194236) [0x7fff22f516bc]
+          1  -[NSAutoreleasePool drain] + 129 (Foundation + 212481) [0x7fff214a1e01]
+            1  _CFAutoreleasePoolPop + 22 (CoreFoundation + 270832) [0x7fff207031f0]
+              1  objc_autoreleasePoolPop + 161 (libobjc.A.dylib + 33598) [0x7fff204e933e]
+                1  AutoreleasePoolPage::releaseUntil(objc_object**) + 167 (libobjc.A.dylib + 152477) [0x7fff2050639d]
+                  1  -[__NSSingleObjectArrayI dealloc] + 57 (CoreFoundation + 288968) [0x7fff207078c8]
+                    1  -[NSControl dealloc] + 88 (AppKit + 1082631) [0x7fff2302a507]
+                      1  -[_NSToolbarItemViewerLabelCellPopUpCell dealloc] + 59 (AppKit + 3214352) [0x7fff23232c10]
+                        1  -[NSPopUpButtonCell dealloc] + 63 (AppKit + 3214422) [0x7fff23232c56]
+                          1  -[NSPopUpButtonCell setMenu:] + 227 (AppKit + 1086995) [0x7fff2302b613]
+                            1  -[NSPopUpButtonCell _unsubscribeFromNotificationsForMenu:] + 76 (AppKit + 1120750) [0x7fff230339ee]
+                              1  -[NSNotificationCenter removeObserver:name:object:] + 257 (Foundation + 220843) [0x7fff214a3eab]
+                                1  _CFXNotificationRemoveObservers + 113 (CoreFoundation + 534771) [0x7fff207438f3]
+                                  1  CFXNotificationRegistrarRemove + 265 (CoreFoundation + 1621537) [0x7fff2084ce21]
+                                    1  _CFXNotificationRegistrarRemoveNames + 219 (CoreFoundation + 1621916) [0x7fff2084cf9c]
+                                      1  _CFXNotificationRegistrarRemoveObjects + 177 (CoreFoundation + 1622332) [0x7fff2084d13c]
+                                        1  _CFXNotificationRegistrarRemoveObservers + 68 (CoreFoundation + 1622574) [0x7fff2084d22e]
+                                          1  _CFXNotificationRegistrarRecycleObserverRegistration + 402 (CoreFoundation + 1629985) [0x7fff2084ef21]
+                                            1  nanov2_free_definite_size + 27 (libsystem_malloc.dylib + 9370) [0x7fff2047149a]
+        1  -[NSApplication run] + 586 (AppKit + 194186) [0x7fff22f5168a]
+          1  -[NSApplication(NSEvent) _nextEventMatchingEventMask:untilDate:inMode:dequeue:] + 1366 (AppKit + 250231) [0x7fff22f5f177]
+            1  _DPSNextEvent + 883 (AppKit + 256433) [0x7fff22f609b1]
+              1  _BlockUntilNextEventMatchingListInModeWithFilter + 64 (HIToolbox + 201039) [0x7fff289c814f]
+                1  ReceiveNextEventCommon + 709 (HIToolbox + 201772) [0x7fff289c842c]
+                  1  RunCurrentEventLoopInMode + 292 (HIToolbox + 202288) [0x7fff289c8630]
+                    1  CFRunLoopRunSpecific + 563 (CoreFoundation + 521934) [0x7fff207406ce]
+                      1  __CFRunLoopRun + 2731 (CoreFoundation + 526418) [0x7fff20741852]
+                        1  __CFRUNLOOP_IS_SERVICING_THE_MAIN_DISPATCH_QUEUE__ + 9 (CoreFoundation + 780656) [0x7fff2077f970]
+                          1  _dispatch_main_queue_callback_4CF + 940 (libdispatch.dylib + 64390) [0x7fff204abb86]
+                            1  _dispatch_client_callout + 8 (libdispatch.dylib + 14279) [0x7fff2049f7c7]
+                              1  _dispatch_call_block_and_release + 12 (libdispatch.dylib + 9693) [0x7fff2049e5dd]
+                                1  ??? (Finder + 2668866) [0x10ee66942]
+                                  1  ??? (Finder + 4341929) [0x10efff0a9]
+                                    1  ??? (Finder + 3384624) [0x10ef15530]
+                                      1  -[NSWindow _close] + 347 (AppKit + 3681039) [0x7fff232a4b0f]
+                                        1  -[NSWindow _finishClosingWindow] + 124 (AppKit + 9358226) [0x7fff2380eb92]
+                                          1  -[NSNotificationCenter postNotificationName:object:userInfo:] + 59 (Foundation + 39614) [0x7fff21477abe]
+                                            1  _CFXNotificationPost + 723 (CoreFoundation + 293854) [0x7fff20708bde]
+                                              1  _CFXRegistrationPost + 454 (CoreFoundation + 1124367) [0x7fff207d380f]
+                                                1  ___CFXRegistrationPost_block_invoke + 49 (CoreFoundation + 1124507) [0x7fff207d389b]
+                                                  1  __CFNOTIFICATIONCENTER_IS_CALLING_OUT_TO_AN_OBSERVER__ + 12 (CoreFoundation + 487404) [0x7fff20737fec]
+                                                    1  ??? (Finder + 627334) [0x10ec74286]
+                                                      1  ??? (Finder + 3979243) [0x10efa67eb]
+                                                        1  ??? (Finder + 633850) [0x10ec75bfa]
+                                                          1  ??? (Finder + 4656125) [0x10f04bbfd]
+                                                            1  ??? (Finder + 1681795) [0x10ed75983]
+                                                              1  ??? (Finder + 4656125) [0x10f04bbfd]
+                                                                1  ??? (Finder + 627873) [0x10ec744a1]
+                                                                  1  ??? (Finder + 420726) [0x10ec41b76]
+                                                                    1  ??? (Finder + 756422) [0x10ec93ac6]
+                                                                      1  ??? (Finder + 729360) [0x10ec8d110]
+                                                                        1  -[NSBrowser setLastColumn:] + 724 (AppKit + 4180181) [0x7fff2331e8d5]
+                                                                          1  -[NSScrollView setDocumentView:] + 70 (AppKit + 825066) [0x7fff22feb6ea]
+                                                                            1  -[NSClipView setDocumentView:] + 446 (AppKit + 745670) [0x7fff22fd80c6]
+                                                                              1  -[NSView removeFromSuperview] + 140 (AppKit + 557597) [0x7fff22faa21d]
+                                                                                1  -[NSTableView _setSuperview:] + 290 (AppKit + 2651510) [0x7fff231a9576]
+                                                                                  1  -[NSView _setSuperview:] + 216 (AppKit + 396114) [0x7fff22f82b52]
+                                                                                    1  ??? (Finder + 4873007) [0x10f080b2f]
+                                                                                      1  ??? (Finder + 207070) [0x10ec0d8de]
+                                                                                        1  -[NSNotificationCenter postNotificationName:object:userInfo:] + 59 (Foundation + 39614) [0x7fff21477abe]
+                                                                                          1  _CFXNotificationPost + 723 (CoreFoundation + 293854) [0x7fff20708bde]
+                                                                                            1  _CFXRegistrationPost + 454 (CoreFoundation + 1124367) [0x7fff207d380f]
+                                                                                              1  ___CFXRegistrationPost_block_invoke + 49 (CoreFoundation + 1124507) [0x7fff207d389b]
+                                                                                                1  __CFNOTIFICATIONCENTER_IS_CALLING_OUT_TO_AN_OBSERVER__ + 12 (CoreFoundation + 487404) [0x7fff20737fec]
+                                                                                                  1  ??? (Finder + 3118835) [0x10eed46f3]
+                                                                                                    1  ??? (Finder + 3118937) [0x10eed4759]
+                                                                                                      1  ??? (Finder + 4974156) [0x10f09964c]
+                                                                                                        1  -[NSTableView setDelegate:] + 841 (AppKit + 1095040) [0x7fff2302d580]
+                                                                                                          1  -[NSTableView _updateRowData] + 157 (AppKit + 866946) [0x7fff22ff5a82]
+                                                                                                            1  -[NSTableRowData removeAllObjects] + 365 (AppKit + 4157615) [0x7fff233190af]
+                                                                                                              1  -[NSView removeFromSuperview] + 158 (AppKit + 557615) [0x7fff22faa22f]
+                                                                                                                1  -[NSView _setWindow:] + 884 (AppKit + 357063) [0x7fff22f792c7]
+                                                                                                                  1  -[NSView _needsLayoutEngine] + 25 (AppKit + 358461) [0x7fff22f7983d]
+  2  start_wqthread + 15 (libsystem_pthread.dylib + 9319) [0x7fff20646467]
+    1  _pthread_wqthread + 470 (libsystem_pthread.dylib + 13621) [0x7fff20647535]
+      1  _pthread_wqthread_exit + 77 (libsystem_pthread.dylib + 18276) [0x7fff20648764]
+        1  _pthread_exit + 70 (libsystem_pthread.dylib + 28569) [0x7fff2064af99]
+          1  _pthread_tsd_cleanup + 487 (libsystem_pthread.dylib + 18872) [0x7fff206489b8]
+            1  _dispatch_cache_cleanup + 20 (libdispatch.dylib + 65568) [0x7fff204ac020]
+              1  nanov2_free_to_block + 418 (libsystem_malloc.dylib + 9895) [0x7fff204716a7]
+                1  <Effective Thread QoS Default, Requested Thread QoS Default>
+    1  _pthread_wqthread + 314 (libsystem_pthread.dylib + 13465) [0x7fff20647499]
+      1  _dispatch_workloop_worker_thread + 819 (libdispatch.dylib + 80989) [0x7fff204afc5d]
+        1  _dispatch_lane_invoke + 375 (libdispatch.dylib + 41163) [0x7fff204a60cb]
+          1  _dispatch_lane_serial_drain + 606 (libdispatch.dylib + 38398) [0x7fff204a55fe]
+            1  _dispatch_client_callout + 8 (libdispatch.dylib + 14279) [0x7fff2049f7c7]
+              1  _dispatch_call_block_and_release + 12 (libdispatch.dylib + 9693) [0x7fff2049e5dd]
+                1  invocation function for block in TVolumeSyncThread::PostNodeTaskRequest(std::__1::shared_ptr<TVolumeSyncThread> const&, TNodeTask*) + 147 (DesktopServicesPriv + 869324) [0x7fff23fc13cc]
+                  1  ExceptionSafeBlock(void () block_pointer) + 9 (DesktopServicesPriv + 59257) [0x7fff23efb779]
+                    1  TNode::HandleNodeRequest(TRef<TNodeTask*, TInternalRefCountPolicy<TNodeTask> > const&) + 541 (DesktopServicesPriv + 462861) [0x7fff23f5e00d]
+                      1  TNode::HandleRegisterForNotification(TRef<TNodeTask*, TInternalRefCountPolicy<TNodeTask> > const&, TNodePtr const&) + 183 (DesktopServicesPriv + 467055) [0x7fff23f5f06f]
+                        1  TNode::HandlePopulate(bool, bool) const + 222 (DesktopServicesPriv + 308204) [0x7fff23f383ec]
+                          1  TNode::HandleSync(NodeRequestOptions) + 32 (DesktopServicesPriv + 268206) [0x7fff23f2e7ae]
+                            1  TNode::HandleSync(NodeRequestOptions, TNodeEventPtrs&) + 3431 (DesktopServicesPriv + 354021) [0x7fff23f436e5]
+                              1  TNode::ReconcileProperties(std::__1::shared_ptr<TFSInfo> const&, TNodeEventPtrs&) + 157 (DesktopServicesPriv + 249415) [0x7fff23f29e47]
+                                1  TFSInfo::SynchronizeProperties(std::__1::shared_ptr<TFSInfo> const&, std::__1::set<unsigned int, std::__1::less<unsigned int>, std::__1::allocator<unsigned int> >&) + 191 (DesktopServicesPriv + 1243187) [0x7fff2401c833]
+                                  1  TFSInfo::FetchISIcon() const + 787 (DesktopServicesPriv + 1142971) [0x7fff240040bb]
+                                    1  -[ISIconFactory initWithURL:] + 43 (IconServices + 51602) [0x7fff2b3d3992]
+                                      1  +[ISIconFactory _iconForURL:options:] + 4191 (IconServices + 48223) [0x7fff2b3d2c5f]
+                                        1  -[ISCustomIconManager specialFolderTypeForURL:] + 34 (IconServices + 252663) [0x7fff2b404af7]
+                                          1  -[NSURL filePathURL] + 114 (CoreFoundation + 936192) [0x7fff207a5900]
+                                            1  CFURLCreateFilePathURL + 259 (CoreFoundation + 936532) [0x7fff207a5a54]
+                                              1  CFURLCreateStringWithFileSystemPath + 299 (CoreFoundation + 90367) [0x7fff206d70ff]
+                                                1  FileReferenceURLPathToFullURLPath + 248 (CoreFoundation + 1055924) [0x7fff207c2cb4]
+                                                  1  _FSCreatePathForFileID + 62 (CoreServicesInternal + 127343) [0x7fff22dc016f]
+                                                    1  fsgetpath + 10 (libsystem_kernel.dylib + 15042) [0x7fff20618ac2]
+                                                      1  <Kernel mode, Effective Thread QoS User Initiated, Requested Thread QoS User Initiated>
+
+  Binary Images:
+           0x10ebdb000 -        0x10f652fff  com.apple.finder 11.1 (1350.2.10)         <645F09C0-A56B-3F9D-82CD-66CD30DA15DB>  /System/Library/CoreServices/Finder.app/Contents/MacOS/Finder
+        0x7fff2046f000 -     0x7fff2049bfff  libsystem_malloc.dylib (317.40.8)         <A498D1EF-E43D-310C-84E8-9C0AADA0C475>  /usr/lib/system/libsystem_malloc.dylib
+        0x7fff2049c000 -     0x7fff204e0fff  libdispatch.dylib (1271.40.12)            <AD988EEA-1A2F-3404-9A6E-390FC2504223>  /usr/lib/system/libdispatch.dylib
+        0x7fff204e1000 -     0x7fff20519fff  libobjc.A.dylib (818.2)                   <EB6B543F-D42C-3FB2-A2EC-43407C5F80D3>  /usr/lib/libobjc.A.dylib
+        0x7fff20615000 -     0x7fff20643fff  libsystem_kernel.dylib (7195.81.3)        <AB413518-ECDE-3F04-A61C-278D3CF43076>  /usr/lib/system/libsystem_kernel.dylib
+        0x7fff20644000 -     0x7fff2064ffff  libsystem_pthread.dylib (454.80.2)        <B989DF6C-ADFE-3AF9-9C91-07D2521F9E47>  /usr/lib/system/libsystem_pthread.dylib
+        0x7fff20650000 -     0x7fff2068afff  libdyld.dylib (832.7.3)                   <4641E48F-75B5-3CC7-8263-47BF79F15394>  /usr/lib/system/libdyld.dylib
+        0x7fff206c1000 -     0x7fff20b5cfff  com.apple.CoreFoundation 6.9 (1774.101)   <2A0E160E-9EE6-3B23-8832-6979A16EC250>  /System/Library/Frameworks/CoreFoundation.framework/Versions/A/CoreFoundation
+        0x7fff2146e000 -     0x7fff217d1fff  com.apple.Foundation 6.9 (1774.101)       <8D9081B3-3F6A-31A0-9B20-1AE5CD8DD747>  /System/Library/Frameworks/Foundation.framework/Versions/C/Foundation
+        0x7fff22da1000 -     0x7fff22ddffff  com.apple.CoreServicesInternal 476 (476)  <0DA95074-B315-3B84-B8A3-BAEDC4471A2C>  /System/Library/PrivateFrameworks/CoreServicesInternal.framework/Versions/A/CoreServicesInternal
+        0x7fff22f22000 -     0x7fff23c84fff  com.apple.AppKit 6.9 (2022.30.122)        <A8124803-CB85-3F33-8674-16B2A021D71C>  /System/Library/Frameworks/AppKit.framework/Versions/C/AppKit
+        0x7fff23eed000 -     0x7fff24077fff  com.apple.desktopservices 1.18 (1346.3.1) <2144B85E-A433-3F9E-A25D-E8F9D7B6D175>  /System/Library/PrivateFrameworks/DesktopServicesPriv.framework/Versions/A/DesktopServicesPriv
+        0x7fff28997000 -     0x7fff28c96fff  com.apple.HIToolbox 2.1.1 (1061.2)        <82B316E1-E47F-334D-8C33-DB1B7E8A4F71>  /System/Library/Frameworks/Carbon.framework/Versions/A/Frameworks/HIToolbox.framework/Versions/A/HIToolbox
+        0x7fff2b3c7000 -     0x7fff2b434fff  com.apple.IconServices 479.3 (479.3)      <B6859735-701D-307E-8061-298BA2296E47>  /System/Library/PrivateFrameworks/IconServices.framework/Versions/A/IconServices
+
+
+Powerstats for:   WindowServer
+UUID:             443B749B-3A51-39E8-8F90-84272F3C5C07
+Path:             /System/Library/PrivateFrameworks/SkyLight.framework/Versions/A/Resources/WindowServer
+Architecture:     x86_64
+Start time:       2021-02-12 21:43:03.493 +0800
+End time:         2021-02-12 21:43:16.370 +0800
+Num samples:      4 (9%)
+Primary state:    2 samples Non-Frontmost App, Non-Suppressed, User mode, Effective Thread QoS Unspecified, Requested Thread QoS Unspecified, Override Thread QoS Unspecified
+User Activity:    0 samples Idle, 4 samples Active
+Power Source:     0 samples on Battery, 4 samples on AC
+  3  start + 1 (libdyld.dylib + 87585) [0x7fff20665621]
+    3  ??? (WindowServer + 13116) [0x1060c833c]
+      3  SLXServer + 1910 (SkyLight + 2759947) [0x7fff25162d0b]
+        3  server_loop + 91 (SkyLight + 2760505) [0x7fff25162f39]
+          3  CGXRunOneServicesPass + 1717 (SkyLight + 2757007) [0x7fff2516218f]
+            3  post_port_data + 261 (SkyLight + 2757943) [0x7fff25162537]
+              2  block_hoist_notification_handler(unsigned int, mach_msg_header_t*, void*) + 203 (SkyLight + 194796) [0x7fff24ef08ec]
+                2  _Block_release + 128 (libsystem_blocks.dylib + 5637) [0x7fff20380605]
+                  1  free_tiny + 134 (libsystem_malloc.dylib + 24773) [0x7fff204750c5]
+                    1  __ulock_wait + 10 (libsystem_kernel.dylib + 9678) [0x7fff206175ce]
+                      1  <Kernel mode>
+                  1  _Block_release + 77 (libsystem_blocks.dylib + 5586) [0x7fff203805d2]
+              1  non_coalesced_timer_handler + 16 (SkyLight + 2511062) [0x7fff251260d6]
+                1  run_timer_pass + 482 (SkyLight + 2510760) [0x7fff25125fa8]
+                  1  update_display_callback(void*, double) + 1482 (SkyLight + 2077233) [0x7fff250bc231]
+                    1  CGXUpdateDisplay + 16774 (SkyLight + 2118560) [0x7fff250c63a0]
+                      1  WS::Displays::CDDisplay::render_update(WS::Displays::Update&, Compositor*, unsigned int, WSCompositeSourceLayer*) + 905 (SkyLight + 1561915) [0x7fff2503e53b]
+                        1  CompositorMetal::CompositeLayersToDestination(WSCompositeSourceLayer*, WSCompositeDestination*, unsigned long long) + 229 (SkyLight + 2671875) [0x7fff2514d503]
+                          1  CompositorMetal::composite(WSCompositeSourceLayer*, WSCompositeDestination*, bool, bool) + 1538 (SkyLight + 2695438) [0x7fff2515310e]
+                            1  MetalContext::EndUpdate(bool) + 101 (SkyLight + 1084009) [0x7fff24fc9a69]
+                              1  MetalContext::Flush(bool) + 227 (SkyLight + 1079423) [0x7fff24fc887f]
+                                1  -[_MTLCommandQueue submitCommandBuffer:] + 112 (Metal + 168640) [0x7fff286362c0]
+                                  1  _dispatch_lane_barrier_sync_invoke_and_complete + 60 (libdispatch.dylib + 67077) [0x7fff204ac605]
+                                    1  _dispatch_client_callout + 8 (libdispatch.dylib + 14279) [0x7fff2049f7c7]
+                                      1  __40-[_MTLCommandQueue submitCommandBuffer:]_block_invoke + 26 (Metal + 168700) [0x7fff286362fc]
+                                        1  -[_MTLCommandQueue _submitAvailableCommandBuffers] + 792 (Metal + 134875) [0x7fff2862dedb]
+                                          1  -[BronzeMtlCmdQueue submitCommandBuffers:count:] + 41 (AMDMTLBronzeDriver + 816050) [0x7fff6ee703b2]
+                                            1  -[MTLIOAccelCommandQueue submitCommandBuffers:count:] + 651 (Metal + 135731) [0x7fff2862e233]
+                                              1  IOAccelCommandQueueSubmitCommandBuffers + 127 (IOAccelerator + 11569) [0x7fff28606d31]
+                                                1  IOConnectCallMethod + 186 (IOKit + 14111) [0x7fff22e1e71f]
+                                                  1  io_connect_method + 383 (IOKit + 14600) [0x7fff22e1e908]
+                                                    1  mach_msg_trap + 10 (libsystem_kernel.dylib + 3710) [0x7fff20615e7e]
+                                                      1  <Kernel mode>
+  1  thread_start + 15 (libsystem_pthread.dylib + 9339) [0x7fff2064647b]
+    1  _pthread_start + 224 (libsystem_pthread.dylib + 26960) [0x7fff2064a950]
+      1  thread_fun(void*) + 25 (QuartzCore + 292957) [0x7fff26f2385d]
+        1  CA::Render::Server::server_thread(void*) + 1561 (QuartzCore + 294525) [0x7fff26f23e7d]
+          1  -[OS_voucher dealloc] + 47 (libdispatch.dylib + 14006) [0x7fff2049f6b6]
+            1  free_tiny + 462 (libsystem_malloc.dylib + 25101) [0x7fff2047520d]
+
+  Binary Images:
+           0x1060c5000 -        0x1060d8fff  WindowServer (570.7)                        <443B749B-3A51-39E8-8F90-84272F3C5C07>  /System/Library/PrivateFrameworks/SkyLight.framework/Versions/A/Resources/WindowServer
+        0x7fff2037f000 -     0x7fff20380fff  libsystem_blocks.dylib (78)                 <E644CAA0-65B7-36E4-8041-520F3301F3DB>  /usr/lib/system/libsystem_blocks.dylib
+        0x7fff2046f000 -     0x7fff2049bfff  libsystem_malloc.dylib (317.40.8)           <A498D1EF-E43D-310C-84E8-9C0AADA0C475>  /usr/lib/system/libsystem_malloc.dylib
+        0x7fff2049c000 -     0x7fff204e0fff  libdispatch.dylib (1271.40.12)              <AD988EEA-1A2F-3404-9A6E-390FC2504223>  /usr/lib/system/libdispatch.dylib
+        0x7fff20615000 -     0x7fff20643fff  libsystem_kernel.dylib (7195.81.3)          <AB413518-ECDE-3F04-A61C-278D3CF43076>  /usr/lib/system/libsystem_kernel.dylib
+        0x7fff20644000 -     0x7fff2064ffff  libsystem_pthread.dylib (454.80.2)          <B989DF6C-ADFE-3AF9-9C91-07D2521F9E47>  /usr/lib/system/libsystem_pthread.dylib
+        0x7fff20650000 -     0x7fff2068afff  libdyld.dylib (832.7.3)                     <4641E48F-75B5-3CC7-8263-47BF79F15394>  /usr/lib/system/libdyld.dylib
+        0x7fff22e1b000 -     0x7fff22ec9fff  com.apple.framework.IOKit 2.0.2 (1845.81.1) <49AC0177-35A3-3C96-AD9D-3E59923C4761>  /System/Library/Frameworks/IOKit.framework/Versions/A/IOKit
+        0x7fff24ec1000 -     0x7fff25227fff  com.apple.SkyLight 1.600.0 (570.7)          <8034EAA7-787C-3A3E-A301-FF90376F247D>  /System/Library/PrivateFrameworks/SkyLight.framework/Versions/A/SkyLight
+        0x7fff26edc000 -     0x7fff271a6fff  com.apple.QuartzCore 1.11 (926.8)           <04D8759B-1119-3E37-B922-32BDECB7C5D2>  /System/Library/Frameworks/QuartzCore.framework/Versions/A/QuartzCore
+        0x7fff28604000 -     0x7fff2860cfff  com.apple.IOAccelerator 439.52 (439.52)     <41EDF102-E1B5-3FBA-A74A-6C583CAA5D24>  /System/Library/PrivateFrameworks/IOAccelerator.framework/Versions/A/IOAccelerator
+        0x7fff2860d000 -     0x7fff28732fff  com.apple.Metal 244.32.7 (244.32.7)         <829B9C4D-2DB6-38C9-9FE8-E6544FB3BDCC>  /System/Library/Frameworks/Metal.framework/Versions/A/Metal
+        0x7fff6eda9000 -     0x7fff6ef69fff  com.apple.AMDMTLBronzeDriver 4.2.15 (4.0.2) <66C89195-BF36-39DB-8227-2BCC2D586A2F>  /System/Library/Extensions/AMDMTLBronzeDriver.bundle/Contents/MacOS/AMDMTLBronzeDriver
