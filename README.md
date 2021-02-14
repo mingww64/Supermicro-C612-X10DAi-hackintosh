@@ -1,4 +1,4 @@
-## Supermicro X10DAi running macOS
+## running macOS on Supermicro X10DAi 
 |support macOS ver.|11.2|
 |:-|-|
 |bootloader|OpenCore 0.66 DBG|
