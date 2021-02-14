@@ -16,4 +16,4 @@
   * __Onboard-audio not test but should work__ *//my alc888 is broken*
   * _Some logs uploaded,if you need more detail feel free to contact me._  
 *** 
-__For v4 cpu user,needs to change some stuffs like fake cpu id,more info: [dortania guide](https://dortania.github.io/OpenCore-Install-Guide/) __
+__ For v4 cpu user,needs to change some stuffs like fake cpu id,more info: [dortania guide](https://dortania.github.io/OpenCore-Install-Guide/) __
