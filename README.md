@@ -1,10 +1,10 @@
 ## running macOS on Supermicro X10DAi 
-|support macOS ver.|11.2|
+|Support macOS ver.|11.2|
 |:-|-|
-|bootloader|OpenCore 0.66 DBG|
+|Bootloader|OpenCore 0.66 DBG|
 |CPU Platform|Haswell-EP(E5v3)
 
-|system-configs||notes|
+|System Configuraion||notes|
 |:-|:-:|:-:|
 |CPU|Xeon E5 2695v3 ES x2|XCPM work,but not sure if cpu Scheduling correct|
 |Graphics|Radeon Pro Duo Fiji |Mod to add GoP support| 
