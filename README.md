@@ -1,16 +1,16 @@
-## Supermicro X10DAi running macOS
-|support macOS ver.|11.2|
+## running macOS on Supermicro X10DAi 
+|Support macOS ver.|11.2|
 |:-|-|
-|bootloader|OpenCore 0.66 DBG|
+|Bootloader|OpenCore 0.66 DBG|
 |CPU Platform|Haswell-EP(E5v3)
 
-|system-configs||notes|
+|System Configuraion||notes|
 |:-|:-:|:-:|
 |CPU|Xeon E5 2695v3 ES x2|XCPM work,but not sure if cpu Scheduling correct|
 |Graphics|Radeon Pro Duo Fiji |Mod to add GoP support| 
 |BIOS|X10DAi9.C16|Mod to unblock cfg lock and add nvme support|
 |Sounds|Creative usb external card|Use soundsource to adjust volume|
-|Keyboard|ikbc F87|Update [firmware]（https://share.weiyun.com/riG5w1hT) to solve typing problem|
+|Keyboard|ikbc F87|Update [firmware](https://share.weiyun.com/riG5w1hT) to solve typing problem|
 |Disk|WD sn720 x4 |via PCIE|Not sure if nvmefix.kext is a must|
 |Monitor|3840x2160 27' |Connect via DP|
 * __issues__ 
