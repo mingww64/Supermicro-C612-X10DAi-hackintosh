@@ -1,0 +1,78 @@
+{\rtf1\ansi\ansicpg936\cocoartf2578
+\cocoatextscaling0\cocoaplatform0{\fonttbl\f0\fswiss\fcharset0 Helvetica;}
+{\colortbl;\red255\green255\blue255;}
+{\*\expandedcolortbl;;}
+\paperw11900\paperh16840\margl1440\margr1440\vieww11520\viewh8400\viewkind0
+\pard\tx566\tx1133\tx1700\tx2267\tx2834\tx3401\tx3968\tx4535\tx5102\tx5669\tx6236\tx6803\pardirnatural\partightenfactor0
+
+\f0\fs24 \cf0 mp_kdp_enter() timed-out on cpu 0, NMI-ing\
+mp_kdp_enter() NMI pending on cpus: 0 29 30 31 32 33 34 35 36 37 38 39 40 41 42 43 44 45 46 47 48 49 50 51 52 53 54 55\
+mp_kdp_enter() timed-out during locked wait after NMI;expected 28 acks but received 1 after 28260908 loops in 1150001644 ticks\
+panic(cpu 0 caller 0xffffff8013bee1e6): Kernel trap at 0xffffff8016426ff7, type 14=page fault, registers:\
+CR0: 0x000000008001003b, CR2: 0x00000000000000d8, CR3: 0x000000002cae5000, CR4: 0x00000000001626e0\
+RAX: 0xffffff939dd3a2c0, RBX: 0x0000000000000001, RCX: 0x0000000000000000, RDX: 0x0000000000000000\
+RSP: 0xffffffa0bfdf3c10, RBP: 0xffffffa0bfdf3c40, RSI: 0xffffff86de876480, RDI: 0x0000000000000000\
+R8:  0x0000000000000001, R9:  0x0000000000000003, R10: 0x0000000000000001, R11: 0xffffffa09e4bd280\
+R12: 0x0000000000000000, R13: 0x0000000000000000, R14: 0x0000000000000000, R15: 0xffffff801644d9d0\
+RFL: 0x0000000000010207, RIP: 0xffffff8016426ff7, CS:  0x0000000000000008, SS:  0x0000000000000010\
+Fault CR2: 0x00000000000000d8, Error code: 0x0000000000000000, Fault CPU: 0x0, PL: 1, VF: 5\
+\
+Backtrace (CPU 0), Frame : Return Address\
+0xffffffa0bfdf3630 : 0xffffff8013abab4d mach_kernel : _handle_debugger_trap + 0x3dd\
+0xffffffa0bfdf3680 : 0xffffff8013bfd7e3 mach_kernel : _kdp_i386_trap + 0x143\
+0xffffffa0bfdf36c0 : 0xffffff8013bede1a mach_kernel : _kernel_trap + 0x55a\
+0xffffffa0bfdf3710 : 0xffffff8013a5fa2f mach_kernel : _return_from_trap + 0xff\
+0xffffffa0bfdf3730 : 0xffffff8013aba3ed mach_kernel : _DebuggerTrapWithState + 0xad\
+0xffffffa0bfdf3850 : 0xffffff8013aba6d8 mach_kernel : _panic_trap_to_debugger + 0x268\
+0xffffffa0bfdf38c0 : 0xffffff80142bef9a mach_kernel : _panic + 0x54\
+0xffffffa0bfdf3930 : 0xffffff8013bee1e6 mach_kernel : _sync_iss_to_iks + 0x2c6\
+0xffffffa0bfdf3ab0 : 0xffffff8013bedecd mach_kernel : _kernel_trap + 0x60d\
+0xffffffa0bfdf3b00 : 0xffffff8013a5fa2f mach_kernel : _return_from_trap + 0xff\
+0xffffffa0bfdf3b20 : 0xffffff8016426ff7 com.apple.iokit.IOPCIFamily : __ZN11IOPCIBridge19restoreMachineStateEjP11IOPCIDevice + 0x71\
+0xffffffa0bfdf3c40 : 0xffffff8016426f3d com.apple.iokit.IOPCIFamily : __ZN11IOPCIBridge19setDevicePowerStateEP11IOPCIDevicem + 0x2b\
+0xffffffa0bfdf3c60 : 0xffffff8014a9d53b com.apple.driver.AppleACPIPlatform : __ZN23AppleACPIPlatformExpert22setPCIBridgePowerStateEi + 0x3f\
+0xffffffa0bfdf3c90 : 0xffffff8014a9da0b com.apple.driver.AppleACPIPlatform : __ZN23AppleACPIPlatformExpert13sleepPlatformEv + 0x35d\
+0xffffffa0bfdf3ce0 : 0xffffff8014aa1bab com.apple.driver.AppleACPIPlatform : __ZN12AppleACPICPU7haltCPUEv + 0x75\
+0xffffffa0bfdf3d00 : 0xffffff8014239fff mach_kernel : __Z16IOCPUSleepKernelv + 0x19f\
+0xffffffa0bfdf3d60 : 0xffffff801427d115 mach_kernel : __ZN14IOPMrootDomain15powerChangeDoneEm + 0xb25\
+0xffffffa0bfdf3de0 : 0xffffff80141ff883 mach_kernel : __ZN9IOService8all_doneEv + 0x753\
+0xffffffa0bfdf3e50 : 0xffffff80141fc5f1 mach_kernel : __ZN9IOService23actionPMWorkQueueInvokeEP11IOPMRequestP13IOPMWorkQueue + 0x881\
+0xffffffa0bfdf3ea0 : 0xffffff80141f9660 mach_kernel : __ZN13IOPMWorkQueue17checkRequestQueueEP11queue_entryPb + 0x90\
+0xffffffa0bfdf3ef0 : 0xffffff80141f950a mach_kernel : __ZN13IOPMWorkQueue12checkForWorkEv + 0xca\
+0xffffffa0bfdf3f30 : 0xffffff801421691e mach_kernel : __ZN10IOWorkLoop15runEventSourcesEv + 0x11e\
+0xffffffa0bfdf3f70 : 0xffffff8014215f06 mach_kernel : __ZN10IOWorkLoop10threadMainEv + 0x36\
+0xffffffa0bfdf3fa0 : 0xffffff8013a5f13e mach_kernel : _call_continuation + 0x2e\
+      Kernel Extensions in backtrace:\
+         com.apple.iokit.IOPCIFamily(2.9)[BF2C5E86-1E8F-3FD4-9874-7738178FA73B]@0xffffff801641f000->0xffffff8016446fff\
+         com.apple.driver.AppleACPIPlatform(6.1)[2F2AA264-6BD5-3E4F-829C-8952B3ABB2D5]@0xffffff8014a92000->0xffffff8014b08fff\
+            dependency: com.apple.driver.AppleSMC(3.1.9)[1E48B8EB-7BF3-3366-8520-2C4B31A7D3F8]@0xffffff8015095000->0xffffff80150adfff\
+            dependency: com.apple.iokit.IOACPIFamily(1.4)[B41AA072-8BB9-3493-9796-6FF849CDABB8]@0xffffff8015ed8000->0xffffff8015ed9fff\
+            dependency: com.apple.iokit.IOPCIFamily(2.9)[BF2C5E86-1E8F-3FD4-9874-7738178FA73B]@0xffffff801641f000->0xffffff8016446fff\
+\
+Process name corresponding to current thread: kernel_task\
+Boot args: -v swd_panic=1 keepsyms=1 debug=0x100 npci=0x2000 alcid=1 chunklist-security-epoch=0 -chunklist-no-rev2-dev\
+\
+Mac OS version:\
+20D64\
+\
+Kernel version:\
+Darwin Kernel Version 20.3.0: Thu Jan 21 00:07:06 PST 2021; root:xnu-7195.81.3~1/RELEASE_X86_64\
+Kernel UUID: C86236B2-4976-3542-80CA-74A6B8B4BA03\
+KernelCache slide: 0x0000000013800000\
+KernelCache base:  0xffffff8013a00000\
+Kernel slide:      0x0000000013810000\
+Kernel text base:  0xffffff8013a10000\
+__HIB  text base: 0xffffff8013900000\
+System model name: iMacPro1,1 (Mac-7BA5B2D9E42DDD94)\
+System shutdown begun: NO\
+Panic diags file available: NO (0xe00002bc)\
+Hibernation exit count: 0\
+\
+System uptime in nanoseconds: 134330358087\
+Last Sleep:           absolute           base_tsc          base_nano\
+  Uptime  : 0x0000001f46b69d6b\
+  Sleep   : 0x0000001f09e841d6 0x00000039f924d94d 0x0000000000000000\
+  Wake    : 0x0000000000000000 0x0000000447e73b11 0x0000001f0a66b054\
+\
+\
+}
