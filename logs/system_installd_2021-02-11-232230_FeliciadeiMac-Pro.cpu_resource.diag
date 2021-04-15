@@ -1,0 +1,428 @@
+Date/Time:        2021-02-11 23:20:06.029 +0800
+End time:         2021-02-11 23:22:28.310 +0800
+OS Version:       macOS 11.2 (Build 20D64)
+Architecture:     x86_64h
+Report Version:   32
+Incident Identifier: F8273074-6E31-4004-B7AA-A55598073C3E
+
+Data Source:      Microstackshots
+Shared Cache:     A33707D1-FC47-30FB-A239-A6AFA68DA7C0 slid base address 0x7fff2031e000, slide 0x31e000
+
+Command:          system_installd
+Path:             /System/Library/PrivateFrameworks/PackageKit.framework/Versions/A/Resources/system_installd
+Version:          ??? (???)
+PID:              606
+
+Event:            cpu usage
+Action taken:     none
+CPU:              90 seconds cpu time over 142 seconds (63% cpu average), exceeding limit of 50% cpu over 180 seconds
+CPU limit:        90s
+Limit duration:   180s
+CPU used:         90s
+CPU duration:     142s
+Duration:         142.28s
+Duration Sampled: 138.25s
+Steps:            90
+
+Hardware model:   iMacPro1,1
+Active cpus:      56
+Boot args:        -v keepsyms=1 debug=0x100 npci=0x2000 alcid=1 chunklist-security-epoch=0 -chunklist-no-rev2-dev
+
+
+Heaviest stack for the target process:
+  40  start_wqthread + 15 (libsystem_pthread.dylib + 9319) [0x7fff2062b467]
+  30  _pthread_wqthread + 244 (libsystem_pthread.dylib + 13395) [0x7fff2062c453]
+  30  _dispatch_worker_thread2 + 92 (libdispatch.dylib + 77752) [0x7fff20493fb8]
+  15  _dispatch_root_queue_drain + 676 (libdispatch.dylib + 76213) [0x7fff204939b5]
+  15  _dispatch_client_callout + 8 (libdispatch.dylib + 14279) [0x7fff204847c7]
+  15  _dispatch_block_async_invoke2 + 83 (libdispatch.dylib + 66005) [0x7fff204911d5]
+  13  -[PKInstall _installMain:] + 3235 (PackageKit + 143108) [0x7fff3c1f6f04]
+  13  -[PKInstallOperationController run] + 249 (PackageKit + 399117) [0x7fff3c23570d]
+  13  -[PKInstallOperation start] + 79 (PackageKit + 403016) [0x7fff3c236648]
+  13  -[NSOperation start] + 785 (Foundation + 266582) [0x7fff21494156]
+  13  __NSOPERATION_IS_INVOKING_MAIN__ + 17 (Foundation + 269989) [0x7fff21494ea5]
+  11  -[PKExtractInstallOperation main] + 520 (PackageKit + 415688) [0x7fff3c2397c8]
+  10  -[PKExtractInstallOperation _extractAllSpecifiersOnceAndReturnFailingSpecifier:andError:] + 668 (PackageKit + 414896) [0x7fff3c2394b0]
+  10  -[PKExtractInstallOperation _extractPayloadForPackageSpecifier:error:] + 1915 (PackageKit + 410974) [0x7fff3c23855e]
+  10  -[PKPayloadCopier run] + 625 (PackageKit + 490258) [0x7fff3c24bb12]
+  10  BOMCopierCopyWithOptions + 4348 (Bom + 14972) [0x7fff2bbd6a7c]
+  10  _BOMCopierCopyFromCPIO + 1118 (Bom + 156126) [0x7fff2bbf91de]
+  10  _copyFromCPIO + 2235 (Bom + 199611) [0x7fff2bc03bbb]
+  10  _copyDir + 3170 (Bom + 37298) [0x7fff2bbdc1b2]
+  10  _copyFromCPIO + 2235 (Bom + 199611) [0x7fff2bc03bbb]
+  10  _copyDir + 3170 (Bom + 37298) [0x7fff2bbdc1b2]
+  10  _copyFromCPIO + 2235 (Bom + 199611) [0x7fff2bc03bbb]
+  10  _copyDir + 3170 (Bom + 37298) [0x7fff2bbdc1b2]
+  10  _copyFromCPIO + 2235 (Bom + 199611) [0x7fff2bc03bbb]
+  10  _copyDir + 3170 (Bom + 37298) [0x7fff2bbdc1b2]
+  10  _copyFromCPIO + 2235 (Bom + 199611) [0x7fff2bc03bbb]
+  10  _copyDir + 3170 (Bom + 37298) [0x7fff2bbdc1b2]
+  10  _copyFromCPIO + 2235 (Bom + 199611) [0x7fff2bc03bbb]
+  10  _copyDir + 3170 (Bom + 37298) [0x7fff2bbdc1b2]
+  10  _copyFromCPIO + 2235 (Bom + 199611) [0x7fff2bc03bbb]
+  10  _copyDir + 3170 (Bom + 37298) [0x7fff2bbdc1b2]
+  10  _copyFromCPIO + 2235 (Bom + 199611) [0x7fff2bc03bbb]
+  10  _copyDir + 3170 (Bom + 37298) [0x7fff2bbdc1b2]
+  10  _copyFromCPIO + 2235 (Bom + 199611) [0x7fff2bc03bbb]
+  10  _copyDir + 3170 (Bom + 37298) [0x7fff2bbdc1b2]
+  10  _copyFromCPIO + 2235 (Bom + 199611) [0x7fff2bc03bbb]
+  10  _copyDir + 3170 (Bom + 37298) [0x7fff2bbdc1b2]
+  6  _copyFromCPIO + 2235 (Bom + 199611) [0x7fff2bc03bbb]
+  6  _copyDir + 3170 (Bom + 37298) [0x7fff2bbdc1b2]
+  6  _copyFromCPIO + 2235 (Bom + 199611) [0x7fff2bc03bbb]
+  6  _copyDir + 3170 (Bom + 37298) [0x7fff2bbdc1b2]
+  6  _copyFromCPIO + 2235 (Bom + 199611) [0x7fff2bc03bbb]
+  6  _copyDir + 3170 (Bom + 37298) [0x7fff2bbdc1b2]
+  3  _copyFromCPIO + 2109 (Bom + 199485) [0x7fff2bc03b3d]
+  1  _copyFile + 3637 (Bom + 44437) [0x7fff2bbddd95]
+  1  utimes + 10 (libsystem_kernel.dylib + 20698) [0x7fff205ff0da]
+
+
+Powerstats for:   system_installd [606]
+UUID:             78195E1B-C76F-35A2-AFC9-00680D72DF72
+Path:             /System/Library/PrivateFrameworks/PackageKit.framework/Versions/A/Resources/system_installd
+Architecture:     x86_64
+Footprint:        32.13 MB -> 32.91 MB (+800 KB) (max 1175.81 MB )
+Pageins:          3 pages
+Start time:       2021-02-11 23:20:09.932 +0800
+End time:         2021-02-11 23:22:28.186 +0800
+Num samples:      70 (78%)
+Primary state:    35 samples Non-Frontmost App, Non-Suppressed, Kernel mode, Effective Thread QoS Utility, Requested Thread QoS Utility, Override Thread QoS Unspecified
+User Activity:    0 samples Idle, 70 samples Active
+Power Source:     0 samples on Battery, 70 samples on AC
+  40  start_wqthread + 15 (libsystem_pthread.dylib + 9319) [0x7fff2062b467]
+    30  _pthread_wqthread + 244 (libsystem_pthread.dylib + 13395) [0x7fff2062c453]
+      30  _dispatch_worker_thread2 + 92 (libdispatch.dylib + 77752) [0x7fff20493fb8]
+        15  _dispatch_root_queue_drain + 676 (libdispatch.dylib + 76213) [0x7fff204939b5]
+          15  _dispatch_client_callout + 8 (libdispatch.dylib + 14279) [0x7fff204847c7]
+            15  _dispatch_block_async_invoke2 + 83 (libdispatch.dylib + 66005) [0x7fff204911d5]
+              13  -[PKInstall _installMain:] + 3235 (PackageKit + 143108) [0x7fff3c1f6f04]
+                13  -[PKInstallOperationController run] + 249 (PackageKit + 399117) [0x7fff3c23570d]
+                  13  -[PKInstallOperation start] + 79 (PackageKit + 403016) [0x7fff3c236648]
+                    13  -[NSOperation start] + 785 (Foundation + 266582) [0x7fff21494156]
+                      13  __NSOPERATION_IS_INVOKING_MAIN__ + 17 (Foundation + 269989) [0x7fff21494ea5]
+                        11  -[PKExtractInstallOperation main] + 520 (PackageKit + 415688) [0x7fff3c2397c8]
+                          10  -[PKExtractInstallOperation _extractAllSpecifiersOnceAndReturnFailingSpecifier:andError:] + 668 (PackageKit + 414896) [0x7fff3c2394b0]
+                            10  -[PKExtractInstallOperation _extractPayloadForPackageSpecifier:error:] + 1915 (PackageKit + 410974) [0x7fff3c23855e]
+                              10  -[PKPayloadCopier run] + 625 (PackageKit + 490258) [0x7fff3c24bb12]
+                                10  BOMCopierCopyWithOptions + 4348 (Bom + 14972) [0x7fff2bbd6a7c]
+                                  10  _BOMCopierCopyFromCPIO + 1118 (Bom + 156126) [0x7fff2bbf91de]
+                                    10  _copyFromCPIO + 2235 (Bom + 199611) [0x7fff2bc03bbb]
+                                      10  _copyDir + 3170 (Bom + 37298) [0x7fff2bbdc1b2]
+                                        10  _copyFromCPIO + 2235 (Bom + 199611) [0x7fff2bc03bbb]
+                                          10  _copyDir + 3170 (Bom + 37298) [0x7fff2bbdc1b2]
+                                            10  _copyFromCPIO + 2235 (Bom + 199611) [0x7fff2bc03bbb]
+                                              10  _copyDir + 3170 (Bom + 37298) [0x7fff2bbdc1b2]
+                                                10  _copyFromCPIO + 2235 (Bom + 199611) [0x7fff2bc03bbb]
+                                                  10  _copyDir + 3170 (Bom + 37298) [0x7fff2bbdc1b2]
+                                                    10  _copyFromCPIO + 2235 (Bom + 199611) [0x7fff2bc03bbb]
+                                                      10  _copyDir + 3170 (Bom + 37298) [0x7fff2bbdc1b2]
+                                                        10  _copyFromCPIO + 2235 (Bom + 199611) [0x7fff2bc03bbb]
+                                                          10  _copyDir + 3170 (Bom + 37298) [0x7fff2bbdc1b2]
+                                                            10  _copyFromCPIO + 2235 (Bom + 199611) [0x7fff2bc03bbb]
+                                                              10  _copyDir + 3170 (Bom + 37298) [0x7fff2bbdc1b2]
+                                                                10  _copyFromCPIO + 2235 (Bom + 199611) [0x7fff2bc03bbb]
+                                                                  10  _copyDir + 3170 (Bom + 37298) [0x7fff2bbdc1b2]
+                                                                    10  _copyFromCPIO + 2235 (Bom + 199611) [0x7fff2bc03bbb]
+                                                                      10  _copyDir + 3170 (Bom + 37298) [0x7fff2bbdc1b2]
+                                                                        10  _copyFromCPIO + 2235 (Bom + 199611) [0x7fff2bc03bbb]
+                                                                          10  _copyDir + 3170 (Bom + 37298) [0x7fff2bbdc1b2]
+                                                                            6   _copyFromCPIO + 2235 (Bom + 199611) [0x7fff2bc03bbb]
+                                                                              6   _copyDir + 3170 (Bom + 37298) [0x7fff2bbdc1b2]
+                                                                                6   _copyFromCPIO + 2235 (Bom + 199611) [0x7fff2bc03bbb]
+                                                                                  6   _copyDir + 3170 (Bom + 37298) [0x7fff2bbdc1b2]
+                                                                                    6   _copyFromCPIO + 2235 (Bom + 199611) [0x7fff2bc03bbb]
+                                                                                      6   _copyDir + 3170 (Bom + 37298) [0x7fff2bbdc1b2]
+                                                                                        3   _copyFromCPIO + 2109 (Bom + 199485) [0x7fff2bc03b3d]
+                                                                                          1   _copyFile + 3637 (Bom + 44437) [0x7fff2bbddd95]
+                                                                                            1   utimes + 10 (libsystem_kernel.dylib + 20698) [0x7fff205ff0da]
+                                                                                          1   _copyFile + 3446 (Bom + 44246) [0x7fff2bbddcd6]
+                                                                                            1   _chPerms + 492 (Bom + 40636) [0x7fff2bbdcebc]
+                                                                                              1   BomSys_chmod + 33 (Bom + 40785) [0x7fff2bbdcf51]
+                                                                                                1   __chmod + 10 (libsystem_kernel.dylib + 15802) [0x7fff205fddba]
+                                                                                          1   _copyFile + 2268 (Bom + 43068) [0x7fff2bbdd83c]
+                                                                                            1   _copyDataFork + 10951 (Bom + 190071) [0x7fff2bc01677]
+                                                                                              1   BOMFileSetAFSCCompression + 110 (Bom + 51774) [0x7fff2bbdfa3e]
+                                                                                                1   __CFDataInit + 0 (CoreFoundation + 1170122) [0x7fff207c3aca]
+                                                                                                  1   <User mode>
+                                                                                        2   _copyFromCPIO + 1695 (Bom + 199071) [0x7fff2bc0399f]
+                                                                                          1   BOMBomGetFSObjectAtPath + 339 (Bom + 105363) [0x7fff2bbecb93]
+                                                                                            1   free_tiny + 442 (libsystem_malloc.dylib + 25081) [0x7fff2045a1f9]
+                                                                                              1   tiny_free_no_lock + 1195 (libsystem_malloc.dylib + 26617) [0x7fff2045a7f9]
+                                                                                                1   tiny_madvise_free_range_no_lock + 235 (libsystem_malloc.dylib + 137841) [0x7fff20475a71]
+                                                                                                  1   madvise + 10 (libsystem_kernel.dylib + 12462) [0x7fff205fd0ae]
+                                                                                          1   BOMBomGetFSObjectAtPath + 326 (Bom + 105350) [0x7fff2bbecb86]
+                                                                                            1   BOMTreeGetValue + 172 (Bom + 273244) [0x7fff2bc15b5c]
+                                                                                              1   _findIndexForKey + 95 (Bom + 271759) [0x7fff2bc1558f]
+                                                                                                1   _bsearchForKey + 806 (Bom + 289062) [0x7fff2bc19926]
+                                                                                                  1   _bsearchForKey + 713 (Bom + 288969) [0x7fff2bc198c9]
+                                                                                                    1   _bsearchForKey + 713 (Bom + 288969) [0x7fff2bc198c9]
+                                                                                                      1   _bsearchForKey + 806 (Bom + 289062) [0x7fff2bc19926]
+                                                                                                        1   _bsearchForKey + 806 (Bom + 289062) [0x7fff2bc19926]
+                                                                                                          1   _bsearchForKey + 713 (Bom + 288969) [0x7fff2bc198c9]
+                                                                                                            1   _bsearchForKey + 713 (Bom + 288969) [0x7fff2bc198c9]
+                                                                                                              1   _bsearchForKey + 111 (Bom + 288367) [0x7fff2bc1966f]
+                                                                                                                1   <User mode>
+                                                                                        1   _copyFromCPIO + 2235 (Bom + 199611) [0x7fff2bc03bbb]
+                                                                                          1   _copyDir + 3170 (Bom + 37298) [0x7fff2bbdc1b2]
+                                                                                            1   _copyFromCPIO + 2235 (Bom + 199611) [0x7fff2bc03bbb]
+                                                                                              1   _copyDir + 3170 (Bom + 37298) [0x7fff2bbdc1b2]
+                                                                                                1   _copyFromCPIO + 2235 (Bom + 199611) [0x7fff2bc03bbb]
+                                                                                                  1   _copyDir + 3170 (Bom + 37298) [0x7fff2bbdc1b2]
+                                                                                                    1   _copyFromCPIO + 2235 (Bom + 199611) [0x7fff2bc03bbb]
+                                                                                                      1   _copyDir + 3170 (Bom + 37298) [0x7fff2bbdc1b2]
+                                                                                                        1   _copyFromCPIO + 2109 (Bom + 199485) [0x7fff2bc03b3d]
+                                                                                                          1   _copyFile + 1181 (Bom + 41981) [0x7fff2bbdd3fd]
+                                                                                                            1   _CheckCopyFileStarted + 92 (Bom + 179084) [0x7fff2bbfeb8c]
+                                                                                                              1   PKPayloadCopierBOMCopierCopyFileStartedHandler + 133 (PackageKit + 484650) [0x7fff3c24a52a]
+                                                                                                                1   _dispatch_event_loop_poke + 371 (libdispatch.dylib + 130790) [0x7fff204a0ee6]
+                                                                                                                  1   kevent_id + 10 (libsystem_kernel.dylib + 9606) [0x7fff205fc586]
+                                                                            4   _copyFromCPIO + 2109 (Bom + 199485) [0x7fff2bc03b3d]
+                                                                              3   _copyFile + 2268 (Bom + 43068) [0x7fff2bbdd83c]
+                                                                                2   _copyDataFork + 6136 (Bom + 185256) [0x7fff2bc003a8]
+                                                                                  2   BOMFileOpenWithSys + 175 (Bom + 47679) [0x7fff2bbdea3f]
+                                                                                    2   _open_with_static_content + 29 (PackageKit + 121156) [0x7fff3c1f1944]
+                                                                                      2   __open + 10 (libsystem_kernel.dylib + 5914) [0x7fff205fb71a]
+                                                                                1   _copyDataFork + 11146 (Bom + 190266) [0x7fff2bc0173a]
+                                                                                  1   _executeBomCopySpecification + 2893 (Bom + 54733) [0x7fff2bbe05cd]
+                                                                                    1   <User mode>
+                                                                              1   _copyFile + 3446 (Bom + 44246) [0x7fff2bbddcd6]
+                                                                                1   _chPerms + 345 (Bom + 40489) [0x7fff2bbdce29]
+                                                                                  1   __lchown + 10 (libsystem_kernel.dylib + 21446) [0x7fff205ff3c6]
+                          1   -[PKExtractInstallOperation _extractAllSpecifiersOnceAndReturnFailingSpecifier:andError:] + 557 (PackageKit + 414785) [0x7fff3c239441]
+                            1   -[PKExtractInstallOperation _extractBomForPackageSpecifier:error:] + 112 (PackageKit + 407214) [0x7fff3c2376ae]
+                              1   -[PKXARArchive dataForPath:] + 81 (PackageKit + 75517) [0x7fff3c1e66fd]
+                                1   -[PKXARArchive _xarFileIsValid:] + 94 (PackageKit + 129654) [0x7fff3c1f3a76]
+                                  1   xar_data_verify + 149 (libxar.1.dylib + 36614) [0x7fff2afd2f06]
+                                    1   xar_attrcopy_from_heap + 389 (libxar.1.dylib + 39368) [0x7fff2afd39c8]
+                                      1   xar_bzip_fromheap_in + 181 (libxar.1.dylib + 33170) [0x7fff2afd2192]
+                                        1   BZ2_bzDecompress + 3021 (libbz2.1.0.dylib + 7170) [0x7fff2a554c02]
+                                          1   <User mode>
+                        2   -[PKPrepareDiskInstallOperation main] + 708 (PackageKit + 595305) [0x7fff3c265569]
+                          1   -[PKInstallAnalyzer includesAppleInternalRootContent] + 327 (PackageKit + 333268) [0x7fff3c2255d4]
+                            1   -[NSString(VolumePathAdditions) _stringByDeletingVolumePath] + 104 (PackageKit + 255562) [0x7fff3c21264a]
+                              1   -[NSString(FixupsAdditions) stringByReallyResolvingSymlinksInPath] + 45 (PackageKit + 493278) [0x7fff3c24c6de]
+                                1   -[NSPathStore2 _stringByResolvingSymlinksInPathUsingCache:] + 127 (Foundation + 49352) [0x7fff2145f0c8]
+                                  1   lstat$INODE64 + 10 (libsystem_kernel.dylib + 30806) [0x7fff20601856]
+                          1   -[PKInstallAnalyzer includesAppleInternalRootContent] + 314 (PackageKit + 333255) [0x7fff3c2255c7]
+                            1   -[NSString(FixupsAdditions) stringByExpandingSymlinksInPathUntilPathIsEncounteredInSet:] + 610 (PackageKit + 493990) [0x7fff3c24c9a6]
+                              1   -[NSString(FixupsAdditions) stringByReallyResolvingSymlinksInPath] + 45 (PackageKit + 493278) [0x7fff3c24c6de]
+                                1   -[NSPathStore2 _stringByResolvingSymlinksInPathUsingCache:] + 127 (Foundation + 49352) [0x7fff2145f0c8]
+                                  1   __getattrlist + 10 (libsystem_kernel.dylib + 5866) [0x7fff205fb6ea]
+              2   -[PKInstall _installMain:] + 2995 (PackageKit + 142868) [0x7fff3c1f6e14]
+                1   -[PKInstallAnalyzer actualFileInstallPathsViolatingReadOnlySystemLocationsEvaluatingDestinationPath:] + 1574 (PackageKit + 332668) [0x7fff3c22537c]
+                  1   -[NSString hasPrefix:] + 60 (Foundation + 191189) [0x7fff21481ad5]
+                    1   -[NSString rangeOfString:options:range:] + 29 (Foundation + 26396) [0x7fff2145971c]
+                      1   -[NSString rangeOfString:options:range:locale:] + 55 (Foundation + 26465) [0x7fff21459761]
+                        1   <User mode>
+                1   -[PKInstallAnalyzer actualFileInstallPathsViolatingReadOnlySystemLocationsEvaluatingDestinationPath:] + 1428 (PackageKit + 332522) [0x7fff3c2252ea]
+                  1   -[NSString(FixupsAdditions) stringByExpandingSymlinksInPathUntilPathIsEncounteredInSet:] + 523 (PackageKit + 493903) [0x7fff3c24c94f]
+                    1   -[NSString hasPrefix:] + 60 (Foundation + 191189) [0x7fff21481ad5]
+                      1   -[NSString rangeOfString:options:range:] + 29 (Foundation + 26396) [0x7fff2145971c]
+                        1   -[NSString rangeOfString:options:range:locale:] + 289 (Foundation + 26699) [0x7fff2145984b]
+                          1   CFStringFindWithOptionsAndLocale + 4223 (CoreFoundation + 51926) [0x7fff206b2ad6]
+                            1   CFUniCharGetBitmapPtrForPlane + 123 (CoreFoundation + 71761) [0x7fff206b7851]
+                              1   <User mode>
+        15  _dispatch_root_queue_drain + 326 (libdispatch.dylib + 75863) [0x7fff20493857]
+          11  _dispatch_async_redirect_invoke + 713 (libdispatch.dylib + 22632) [0x7fff20486868]
+            10  _dispatch_continuation_pop + 543 (libdispatch.dylib + 25101) [0x7fff2048720d]
+              10  _dispatch_client_callout + 8 (libdispatch.dylib + 14279) [0x7fff204847c7]
+                10  _dispatch_call_block_and_release + 12 (libdispatch.dylib + 9693) [0x7fff204835dd]
+                  10  ??? (AppleFSCompression + 34008) [0x7fff2a54b4d8]
+                    10  ??? (AppleFSCompression + 33650) [0x7fff2a54b372]
+                      10  ??? (AppleFSCompression + 36062) [0x7fff2a54bcde]
+                        10  ??? (AppleFSCompression + 12849) [0x7fff2a546231]
+                          2   ??? (AppleFSCompression + 13157) [0x7fff2a546365]
+                            2   <User mode>
+                          1   ??? (AppleFSCompression + 15016) [0x7fff2a546aa8]
+                            1   ??? (AppleFSCompression + 15937) [0x7fff2a546e41]
+                              1   <User mode>
+                          1   ??? (AppleFSCompression + 14495) [0x7fff2a54689f]
+                            1   <User mode>
+                          1   ??? (AppleFSCompression + 14071) [0x7fff2a5466f7]
+                            1   <User mode>
+                          1   ??? (AppleFSCompression + 13839) [0x7fff2a54660f]
+                            1   <User mode>
+                          1   ??? (AppleFSCompression + 13364) [0x7fff2a546434]
+                            1   <User mode>
+                          1   ??? (AppleFSCompression + 13237) [0x7fff2a5463b5]
+                            1   <User mode>
+                          1   ??? (AppleFSCompression + 13169) [0x7fff2a546371]
+                            1   <User mode>
+                          1   ??? (AppleFSCompression + 12972) [0x7fff2a5462ac]
+                            1   <User mode>
+            1   _dispatch_continuation_pop + 423 (libdispatch.dylib + 24981) [0x7fff20487195]
+              1   _dispatch_client_callout + 8 (libdispatch.dylib + 14279) [0x7fff204847c7]
+                1   _dispatch_call_block_and_release + 12 (libdispatch.dylib + 9693) [0x7fff204835dd]
+                  1   ??? (AppleFSCompression + 34871) [0x7fff2a54b837]
+                    1   ??? (AppleFSCompression + 40509) [0x7fff2a54ce3d]
+                      1   ??? (AppleFSCompression + 34608) [0x7fff2a54b730]
+                        1   ??? (AppleFSCompression + 33811) [0x7fff2a54b413]
+                          1   __CFArrayCreateMutableCopy0 + 214 (CoreFoundation + 696235) [0x7fff2074ffab]
+                            1   CFArrayAppendValue + 95 (CoreFoundation + 134945) [0x7fff206c6f21]
+                              1   _CFArrayReplaceValues + 1349 (CoreFoundation + 1174703) [0x7fff207c4caf]
+                                1   <User mode>
+          4   _dispatch_async_redirect_invoke + 887 (libdispatch.dylib + 22806) [0x7fff20486916]
+            4   _dispatch_continuation_pop + 543 (libdispatch.dylib + 25101) [0x7fff2048720d]
+              4   _dispatch_client_callout + 8 (libdispatch.dylib + 14279) [0x7fff204847c7]
+                4   _dispatch_call_block_and_release + 12 (libdispatch.dylib + 9693) [0x7fff204835dd]
+                  4   ??? (AppleFSCompression + 34008) [0x7fff2a54b4d8]
+                    4   ??? (AppleFSCompression + 33650) [0x7fff2a54b372]
+                      3   ??? (AppleFSCompression + 36062) [0x7fff2a54bcde]
+                        3   ??? (AppleFSCompression + 12849) [0x7fff2a546231]
+                          1   ??? (AppleFSCompression + 14146) [0x7fff2a546742]
+                            1   <User mode>
+                          1   ??? (AppleFSCompression + 12972) [0x7fff2a5462ac]
+                            1   <User mode>
+                          1   ??? (AppleFSCompression + 12965) [0x7fff2a5462a5]
+                            1   <User mode>
+                      1   ??? (AppleFSCompression + 36109) [0x7fff2a54bd0d]
+                        1   ??? (AppleFSCompression + 46920) [0x7fff2a54e748]
+                          1   free_medium + 1336 (libsystem_malloc.dylib + 39260) [0x7fff2045d95c]
+                            1   medium_madvise_free_range_no_lock + 442 (libsystem_malloc.dylib + 127225) [0x7fff204730f9]
+                              1   madvise + 10 (libsystem_kernel.dylib + 12462) [0x7fff205fd0ae]
+    10  _pthread_wqthread + 314 (libsystem_pthread.dylib + 13465) [0x7fff2062c499]
+      9   _dispatch_workloop_worker_thread + 819 (libdispatch.dylib + 80989) [0x7fff20494c5d]
+        9   _dispatch_lane_invoke + 375 (libdispatch.dylib + 41163) [0x7fff2048b0cb]
+          5   _dispatch_lane_serial_drain + 263 (libdispatch.dylib + 38055) [0x7fff2048a4a7]
+            4   _dispatch_lane_invoke + 426 (libdispatch.dylib + 41214) [0x7fff2048b0fe]
+              2   _dispatch_lane_serial_drain + 1024 (libdispatch.dylib + 38816) [0x7fff2048a7a0]
+                2   _dispatch_set_priority_and_voucher_slow + 201 (libdispatch.dylib + 21817) [0x7fff20486539]
+                  2   _dispatch_set_priority_and_mach_voucher_slow + 160 (libdispatch.dylib + 21480) [0x7fff204863e8]
+                    2   __bsdthread_ctl + 10 (libsystem_kernel.dylib + 9630) [0x7fff205fc59e]
+                      1   <User mode>
+              1   _dispatch_lane_serial_drain + 920 (libdispatch.dylib + 38712) [0x7fff2048a738]
+                1   _dispatch_client_callout + 8 (libdispatch.dylib + 14279) [0x7fff204847c7]
+                  1   _dispatch_call_block_and_release + 12 (libdispatch.dylib + 9693) [0x7fff204835dd]
+                    1   ??? (AppleFSCompression + 34008) [0x7fff2a54b4d8]
+                      1   ??? (AppleFSCompression + 33650) [0x7fff2a54b372]
+                        1   ??? (AppleFSCompression + 37005) [0x7fff2a54c08d]
+                          1   ??? (AppleFSCompression + 37540) [0x7fff2a54c2a4]
+                            1   __open + 10 (libsystem_kernel.dylib + 5914) [0x7fff205fb71a]
+              1   _dispatch_lane_serial_drain + 606 (libdispatch.dylib + 38398) [0x7fff2048a5fe]
+                1   _dispatch_client_callout + 8 (libdispatch.dylib + 14279) [0x7fff204847c7]
+                  1   _dispatch_call_block_and_release + 12 (libdispatch.dylib + 9693) [0x7fff204835dd]
+                    1   ??? (AppleFSCompression + 34871) [0x7fff2a54b837]
+                      1   ??? (AppleFSCompression + 41010) [0x7fff2a54d032]
+                        1   close + 10 (libsystem_kernel.dylib + 6278) [0x7fff205fb886]
+            1   _dispatch_lane_invoke + 1103 (libdispatch.dylib + 41891) [0x7fff2048b3a3]
+              1   <User mode>
+          4   _dispatch_lane_serial_drain + 920 (libdispatch.dylib + 38712) [0x7fff2048a738]
+            4   _dispatch_client_callout + 8 (libdispatch.dylib + 14279) [0x7fff204847c7]
+              4   _dispatch_call_block_and_release + 12 (libdispatch.dylib + 9693) [0x7fff204835dd]
+                4   ??? (AppleFSCompression + 34008) [0x7fff2a54b4d8]
+                  4   ??? (AppleFSCompression + 33650) [0x7fff2a54b372]
+                    4   ??? (AppleFSCompression + 35622) [0x7fff2a54bb26]
+                      2   ??? (AppleFSCompression + 33032) [0x7fff2a54b108]
+                        2   _dispatch_event_loop_poke + 371 (libdispatch.dylib + 130790) [0x7fff204a0ee6]
+                          2   kevent_id + 10 (libsystem_kernel.dylib + 9606) [0x7fff205fc586]
+                      2   ??? (AppleFSCompression + 32886) [0x7fff2a54b076]
+                        2   ??? (AppleFSCompression + 33811) [0x7fff2a54b413]
+                          1   __CFArrayCreateMutableCopy0 + 214 (CoreFoundation + 696235) [0x7fff2074ffab]
+                            1   CFArrayAppendValue + 95 (CoreFoundation + 134945) [0x7fff206c6f21]
+                              1   _CFArrayReplaceValues + 140 (CoreFoundation + 1173494) [0x7fff207c47f6]
+                                1   <User mode>
+                          1   __CFArrayCreateMutableCopy0 + 151 (CoreFoundation + 696172) [0x7fff2074ff6c]
+                            1   __CFArrayCreateInit + 194 (CoreFoundation + 307402) [0x7fff206f10ca]
+                              1   _CFRuntimeCreateInstance + 561 (CoreFoundation + 17037) [0x7fff206aa28d]
+                                1   object_setClass + 61 (libobjc.A.dylib + 35512) [0x7fff204ceab8]
+                                  1   <User mode>
+      1   _dispatch_workloop_worker_thread + 175 (libdispatch.dylib + 80345) [0x7fff204949d9]
+        1   <User mode>
+  22  start_wqthread + 0 (libsystem_pthread.dylib + 9304) [0x7fff2062b458]
+    2   <User mode>
+  8   thread_start + 15 (libsystem_pthread.dylib + 9339) [0x7fff2062b47b]
+    8   _pthread_start + 224 (libsystem_pthread.dylib + 26960) [0x7fff2062f950]
+      8   threadWrapperProc + 24 (libParallelCompression.dylib + 74890) [0x7fff2d12f48a]
+        8   workerThreadProc + 738 (libParallelCompression.dylib + 156501) [0x7fff2d143355]
+          8   PCompressLZMADecode + 73 (libParallelCompression.dylib + 75695) [0x7fff2d12f7af]
+            8   lzma_stream_buffer_decode + 245 (liblzma.5.dylib + 43381) [0x7fff2aebe975]
+              8   stream_decode + 1057 (liblzma.5.dylib + 44921) [0x7fff2aebef79]
+                8   block_decode + 172 (liblzma.5.dylib + 38292) [0x7fff2aebd594]
+                  8   lz_decode + 323 (liblzma.5.dylib + 53547) [0x7fff2aec112b]
+                    8   decode_buffer + 129 (liblzma.5.dylib + 53828) [0x7fff2aec1244]
+                      8   lzma2_decode + 174 (liblzma.5.dylib + 70794) [0x7fff2aec548a]
+                        2   lzma_decode + 11585 (liblzma.5.dylib + 66867) [0x7fff2aec4533]
+                          1   _platform_memmove$VARIANT$Haswell + 218 (libsystem_platform.dylib + 4442) [0x7fff2067115a]
+                            1   <User mode>
+                          1   _platform_memmove$VARIANT$Haswell + 154 (libsystem_platform.dylib + 4378) [0x7fff2067111a]
+                            1   <User mode>
+                        1   lzma_decode + 9913 (liblzma.5.dylib + 65195) [0x7fff2aec3eab]
+                          1   <User mode>
+                        1   lzma_decode + 9137 (liblzma.5.dylib + 64419) [0x7fff2aec3ba3]
+                          1   <User mode>
+                        1   lzma_decode + 7422 (liblzma.5.dylib + 62704) [0x7fff2aec34f0]
+                          1   <User mode>
+                        1   lzma_decode + 1775 (liblzma.5.dylib + 57057) [0x7fff2aec1ee1]
+                          1   <User mode>
+                        1   lzma_decode + 1327 (liblzma.5.dylib + 56609) [0x7fff2aec1d21]
+                          1   <User mode>
+                        1   lzma_decode + 589 (liblzma.5.dylib + 55871) [0x7fff2aec1a3f]
+                          1   <User mode>
+
+  Binary Images:
+           0x10f400000 -                ???  system_installd                         <78195E1B-C76F-35A2-AFC9-00680D72DF72>  /System/Library/PrivateFrameworks/PackageKit.framework/Versions/A/Resources/system_installd
+        0x7fff20454000 -     0x7fff20480fff  libsystem_malloc.dylib (317.40.8)       <A498D1EF-E43D-310C-84E8-9C0AADA0C475>  /usr/lib/system/libsystem_malloc.dylib
+        0x7fff20481000 -     0x7fff204c5fff  libdispatch.dylib (1271.40.12)          <AD988EEA-1A2F-3404-9A6E-390FC2504223>  /usr/lib/system/libdispatch.dylib
+        0x7fff204c6000 -     0x7fff204fefff  libobjc.A.dylib (818.2)                 <EB6B543F-D42C-3FB2-A2EC-43407C5F80D3>  /usr/lib/libobjc.A.dylib
+        0x7fff205fa000 -     0x7fff20628fff  libsystem_kernel.dylib (7195.81.3)      <AB413518-ECDE-3F04-A61C-278D3CF43076>  /usr/lib/system/libsystem_kernel.dylib
+        0x7fff20629000 -     0x7fff20634fff  libsystem_pthread.dylib (454.80.2)      <B989DF6C-ADFE-3AF9-9C91-07D2521F9E47>  /usr/lib/system/libsystem_pthread.dylib
+        0x7fff20670000 -     0x7fff20679fff  libsystem_platform.dylib (254.80.2)     <1C3E1A0A-92A8-3CDE-B622-8940B43A5DF2>  /usr/lib/system/libsystem_platform.dylib
+        0x7fff206a6000 -     0x7fff20b41fff  com.apple.CoreFoundation 6.9 (1774.101) <2A0E160E-9EE6-3B23-8832-6979A16EC250>  /System/Library/Frameworks/CoreFoundation.framework/Versions/A/CoreFoundation
+        0x7fff21453000 -     0x7fff217b6fff  com.apple.Foundation 6.9 (1774.101)     <8D9081B3-3F6A-31A0-9B20-1AE5CD8DD747>  /System/Library/Frameworks/Foundation.framework/Versions/C/Foundation
+        0x7fff2a543000 -     0x7fff2a552fff  com.apple.AppleFSCompression 125 (1.0)  <879A04AA-F9A1-3640-A9EF-F5D0813C852A>  /System/Library/PrivateFrameworks/AppleFSCompression.framework/Versions/A/AppleFSCompression
+        0x7fff2a553000 -     0x7fff2a560fff  libbz2.1.0.dylib (44)                   <E163D5F9-E202-3A53-817B-8BC40B9293C0>  /usr/lib/libbz2.1.0.dylib
+        0x7fff2aeb4000 -     0x7fff2aeccfff  liblzma.5.dylib (16)                    <168D84A7-8E54-361E-9161-B661D96C0C9A>  /usr/lib/liblzma.5.dylib
+        0x7fff2afca000 -     0x7fff2afd7fff  libxar.1.dylib (452)                    <FAA7B36E-21EC-3ADF-AA6A-E3742737CA3A>  /usr/lib/libxar.1.dylib
+        0x7fff2bbd3000 -     0x7fff2bc3dfff  com.apple.bom 14.0 (233)                <F4B7C353-8A65-3B54-9E01-2C93CB3F55A3>  /System/Library/PrivateFrameworks/Bom.framework/Versions/A/Bom
+        0x7fff2d11d000 -     0x7fff2d177fff  libParallelCompression.dylib (204.60.1) <32A2EE0A-43E1-3478-93B5-9686E4595D2A>  /usr/lib/libParallelCompression.dylib
+        0x7fff3c1d4000 -     0x7fff3c29bfff  com.apple.PackageKit 3.0 (1030.1)       <8288B542-51DD-38C3-A74E-79D72F2DC746>  /System/Library/PrivateFrameworks/PackageKit.framework/Versions/A/PackageKit
+
+
+Powerstats for:   mds
+UUID:             E5E17679-9183-353B-8D13-8BB63C5F2D0C
+Path:             /System/Library/Frameworks/CoreServices.framework/Versions/A/Frameworks/Metadata.framework/Versions/A/Support/mds
+Architecture:     x86_64
+Start time:       2021-02-11 23:21:38.668 +0800
+End time:         2021-02-11 23:22:20.174 +0800
+Num samples:      9 (10%)
+Primary state:    6 samples Non-Frontmost App, Non-Suppressed, Kernel mode, Effective Thread QoS Utility, Requested Thread QoS Utility, Override Thread QoS Unspecified
+User Activity:    0 samples Idle, 9 samples Active
+Power Source:     0 samples on Battery, 9 samples on AC
+  7  start_wqthread + 0 (libsystem_pthread.dylib + 9304) [0x7fff2062b458]
+    2  <Effective Thread QoS User Initiated, Requested Thread QoS User Initiated>
+  2  start_wqthread + 15 (libsystem_pthread.dylib + 9319) [0x7fff2062b467]
+    2  _pthread_wqthread + 314 (libsystem_pthread.dylib + 13465) [0x7fff2062c499]
+      2  _dispatch_workloop_worker_thread + 819 (libdispatch.dylib + 80989) [0x7fff20494c5d]
+        1  _dispatch_workloop_invoke + 737 (libdispatch.dylib + 44839) [0x7fff2048bf27]
+          1  _dispatch_lane_invoke + 426 (libdispatch.dylib + 41214) [0x7fff2048b0fe]
+            1  _dispatch_lane_serial_drain + 606 (libdispatch.dylib + 38398) [0x7fff2048a5fe]
+              1  _dispatch_client_callout + 8 (libdispatch.dylib + 14279) [0x7fff204847c7]
+                1  mds_dispatch_wrapper + 14 (SpotlightServerKit + 10565) [0x7fff35132945]
+                  1  objc_autoreleasePoolPop + 161 (libobjc.A.dylib + 33598) [0x7fff204ce33e]
+                    1  AutoreleasePoolPage::releaseUntil(objc_object**) + 167 (libobjc.A.dylib + 152477) [0x7fff204eb39d]
+                      1  -[__NSSetM dealloc] + 158 (CoreFoundation + 388157) [0x7fff20704c3d]
+                        1  free_tiny + 442 (libsystem_malloc.dylib + 25081) [0x7fff2045a1f9]
+                          1  tiny_free_no_lock + 171 (libsystem_malloc.dylib + 25593) [0x7fff2045a3f9]
+                            1  <User mode>
+        1  _dispatch_lane_invoke + 375 (libdispatch.dylib + 41163) [0x7fff2048b0cb]
+          1  _dispatch_lane_serial_drain + 606 (libdispatch.dylib + 38398) [0x7fff2048a5fe]
+            1  _dispatch_client_callout + 8 (libdispatch.dylib + 14279) [0x7fff204847c7]
+              1  _dispatch_call_block_and_release + 12 (libdispatch.dylib + 9693) [0x7fff204835dd]
+                1  ??? (mds + 26815) [0x1005e48bf]
+                  1  ??? (mds + 45082) [0x1005e901a]
+                    1  ??? (mds + 591807) [0x10066e7bf]
+                      1  ??? (mds + 1029365) [0x1006d94f5]
+                        1  token_async + 34 (SpotlightServerKit + 11420) [0x7fff35132c9c]
+                          1  _dispatch_event_loop_poke + 371 (libdispatch.dylib + 130790) [0x7fff204a0ee6]
+                            1  kevent_id + 10 (libsystem_kernel.dylib + 9606) [0x7fff205fc586]
+
+  Binary Images:
+           0x1005de000 -        0x1007f1fff  mds (2150.7.5)                                       <E5E17679-9183-353B-8D13-8BB63C5F2D0C>  /System/Library/Frameworks/CoreServices.framework/Versions/A/Frameworks/Metadata.framework/Versions/A/Support/mds
+        0x7fff20454000 -     0x7fff20480fff  libsystem_malloc.dylib (317.40.8)                    <A498D1EF-E43D-310C-84E8-9C0AADA0C475>  /usr/lib/system/libsystem_malloc.dylib
+        0x7fff20481000 -     0x7fff204c5fff  libdispatch.dylib (1271.40.12)                       <AD988EEA-1A2F-3404-9A6E-390FC2504223>  /usr/lib/system/libdispatch.dylib
+        0x7fff204c6000 -     0x7fff204fefff  libobjc.A.dylib (818.2)                              <EB6B543F-D42C-3FB2-A2EC-43407C5F80D3>  /usr/lib/libobjc.A.dylib
+        0x7fff205fa000 -     0x7fff20628fff  libsystem_kernel.dylib (7195.81.3)                   <AB413518-ECDE-3F04-A61C-278D3CF43076>  /usr/lib/system/libsystem_kernel.dylib
+        0x7fff20629000 -     0x7fff20634fff  libsystem_pthread.dylib (454.80.2)                   <B989DF6C-ADFE-3AF9-9C91-07D2521F9E47>  /usr/lib/system/libsystem_pthread.dylib
+        0x7fff206a6000 -     0x7fff20b41fff  com.apple.CoreFoundation 6.9 (1774.101)              <2A0E160E-9EE6-3B23-8832-6979A16EC250>  /System/Library/Frameworks/CoreFoundation.framework/Versions/A/CoreFoundation
+        0x7fff35130000 -     0x7fff3513efff  com.apple.metadata.SpotlightServerKit 1.0 (2150.7.5) <A7030B18-9F50-3404-9422-A4F8BFA303C8>  /System/Library/PrivateFrameworks/SpotlightServerKit.framework/Versions/A/SpotlightServerKit
