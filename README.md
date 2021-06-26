@@ -1,3 +1,4 @@
+# Discontinued
 ## running macOS on Supermicro X10DAi 
 |Support macOS ver.|11.2|
 |:-|-|
