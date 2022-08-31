@@ -1,5 +1,8 @@
-# Discontinued
-## running macOS on Supermicro X10DAi 
+
+
+![interview](https://github.com/wmyfelix/X10DAi-hackintosh/blob/main/interview.png?raw=true)
+
+# Run macOS on the Supermicro X10DAi 
 |Support macOS ver.|11.2|
 |:-|-|
 |Bootloader|OpenCore 0.67 DBG|
@@ -7,20 +10,19 @@
 
 |System Configuraion||notes|
 |:-|:-:|:-:|
-|CPU|Xeon E5 2695v3 ES x2|XCPM work,but not sure if cpu Scheduling correct|
+|CPU|Xeon E5 2695v3 ES x2|XCPM works, not sure if it schedule correctly|
 |Graphics|Radeon Pro Duo Fiji |Mod to add GoP support| 
 |BIOS|X10DAi9.C16|Mod to unblock cfg lock and add nvme support|
 |Sounds|Creative usb external card|Use soundsource to adjust volume|
-|Keyboard|ikbc F87|Update [firmware](https://share.weiyun.com/riG5w1hT) to solve typing problem|
-|Disk|WD sn720 x4 |via PCIE|added deviceproperties and set to "bulit-in"|
-|Monitor|3840x2160 27' |Connect via DP|
+|Keyboard|ikbc F87|Update [firmware](https://share.weiyun.com/riG5w1hT) to fix the misfunctioning typing|
+|Disk|WD sn720 *4 |PCIe Extension Card|added deviceproperties and set to "bulit-in"|
+|Monitor|3840x2160 27' |DP|
 * __issues__ 
   * __Sleep__
-  * __~~Unpredictable window freeze~~,to fix:__ type`defaults write com.apple.coremedia hardwareVideoDecoder disable`in terminal
+  * __~~Unpredictable window freeze~~:__ `$ defaults write com.apple.coremedia hardwareVideoDecoder disable`
   * __Onboard-audio not test but should work__ *//my alc888 is broken*
   * _Some logs uploaded,feel free to contact me._  
 *** 
-__For v4 cpu user,needs to change some stuffs like fake cpu id,more info: [dortania guide](https://dortania.github.io/OpenCore-Install-Guide/config-HEDT/broadwell-e.html#acpi/)__  
+__As for the Broadwell(E5-26XXV4) CPU, it requires to change some stuffs like the Fake CPU ID, see [dortania guide](https://dortania.github.io/OpenCore-Install-Guide/config-HEDT/broadwell-e.html#acpi/)__  
 
 
-![interview](https://github.com/wmyfelix/X10DAi-hackintosh/blob/main/interview.png?raw=true)
