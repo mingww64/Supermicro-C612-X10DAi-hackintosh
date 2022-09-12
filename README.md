@@ -1,7 +1,7 @@
 
 
 ![interview](https://github.com/wmyfelix/X10DAi-hackintosh/blob/main/interview.png?raw=true)
-
+![](https://github.com/wmyfelix/Supermicro-C612-X10DAi-hackintosh/blob/main/Screenshot_20220912_170714.png?raw=true)
 # Run macOS on the Supermicro X10DAi 
 |Support macOS ver.|11.2|
 |:-|-|
