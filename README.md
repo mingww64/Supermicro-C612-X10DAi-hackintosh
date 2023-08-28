@@ -10,7 +10,7 @@
 
 |System Configuraion||notes|
 |:-|:-:|:-:|
-|CPU|Xeon E5 2695v3 ES x2|XCPM works, not sure if it schedule correctly|
+|CPU|Xeon E5 2695v3 ES x2|XCPM works, not sure if it schedules correctly|
 |Graphics|Radeon Pro Duo Fiji |Mod to add GoP support| 
 |BIOS|X10DAi9.C16|Mod to unblock cfg lock and add nvme support|
 |Sounds|Creative usb external card|Use soundsource to adjust volume|
@@ -21,8 +21,8 @@
   * __Sleep__
   * __~~Unpredictable window freeze~~:__ `$ defaults write com.apple.coremedia hardwareVideoDecoder disable`
   * __Onboard-audio not test but should work__ *//my alc888 is broken*
-  * _Some logs uploaded,feel free to contact me._  
+  * _Some logs have been uploaded, feel free to contact me._  
 *** 
-__As for the Broadwell(E5-26XXV4) CPU, it requires to change some stuffs like the Fake CPU ID, see [dortania guide](https://dortania.github.io/OpenCore-Install-Guide/config-HEDT/broadwell-e.html#acpi/)__  
+__As for the Broadwell(E5-26XXV4) CPU, it requires to change some stuff like the Fake CPU ID, see [dortania guide](https://dortania.github.io/OpenCore-Install-Guide/config-HEDT/broadwell-e.html#acpi/)__  
 
 
